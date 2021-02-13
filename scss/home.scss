@@ -1,0 +1,423 @@
+@import 'variable';
+
+.slide-head{
+  .box{
+    position: relative;
+
+    figure{
+      display: flex;
+
+      img{
+        height: 248px;
+        width: 100%;
+        object-fit: cover;
+
+        @media screen and (min-width:$md){
+          height: 248px;
+        }
+        @media screen and (min-width:$lg){
+          height: 391px;
+        }
+        @media screen and (min-width:$xl){
+          height: 734px;
+        }
+      }
+    }
+
+    .detail{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      width: 92%;
+      height: max-content;
+      background-color: #ffffffc2;
+      padding: 1em;
+
+      @media screen and (min-width:$md){
+        top: 1em;
+        left: 1em;
+        transform: unset;
+        width: 75%;
+      }
+      @media screen and (min-width:$lg){
+        top: 50%;
+        left: 2em;
+        transform: translateY(-50%);
+        width: 50%;
+      }
+      @media screen and (min-width:$xl){
+        top: 50%;
+        left: 4em;
+        transform: translateY(-50%);
+        width: 40%;
+      }
+
+      .title{
+        margin-bottom: 1em;
+
+        p{
+          font-size: 1.4em;
+          font-weight: bold;
+          height: 1.4em;
+          overflow: hidden;
+
+          @media screen and (min-width:$md){
+            font-size: 2em;
+          }
+          @media screen and (min-width:$lg){
+            font-size: 2.4em;
+          }
+        }
+      }
+
+      >p{
+        height: 2.7em;
+        overflow: hidden;
+
+        @media screen and (min-width:$md){
+          height: 3.1em;
+        }
+        @media screen and (min-width:$lg){
+          height: 5.7em;
+        }
+      }
+
+      .button{
+        margin-top: 1em;
+      }
+    }
+  }
+  
+  .swiper-pagination{
+    text-align: left;
+    margin-left: 1em;
+
+    @media screen and (min-width:$lg){
+      margin-left: 2em;
+    }
+    @media screen and (min-width:$xl){
+      margin-left: 4em;
+      margin-bottom: 2em;
+    }
+
+    .swiper-pagination-bullet{
+      background: $purple;
+    }
+    .swiper-pagination-bullet-active{
+      background: $black;
+    }
+  }
+}
+
+.home-title{
+  position: relative;
+
+  img{
+    object-fit: cover;
+  }
+
+  .detail{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 80%;
+    text-align: center;
+
+    @media screen and (min-width:$lg){
+      width: 50%;
+    }
+    @media screen and (min-width:$xxl){
+      width: 40%;
+    }
+
+    h1,p{
+      color: $white;
+    }
+    h1{
+      margin-bottom: 1em;
+      border-bottom: 2px solid #ffffff9d;
+    }
+    p{
+      margin-bottom: 1em;
+    }
+  }
+}
+
+.four-box{
+  display: grid;
+  grid-template-columns: 100%;
+  grid-row-gap: 2em;
+  margin: 2em 0;
+  padding: 0 3em;
+
+  @media screen and (min-width:$md){
+    grid-template-columns: repeat(2,1fr);
+    grid-column-gap: 2em;
+  }
+  @media screen and (min-width:$lg){
+    grid-template-columns: repeat(4,1fr);
+  }
+  @media screen and (min-width:$xl){
+    padding: 4em 10em;
+  }
+  @media screen and (min-width:$xxl){
+    padding: 4em 14em;
+  }
+
+  .box{
+    figure{
+      text-align: center;
+
+      img{
+        width: 62px;
+        height: 62px;
+      }
+    }
+
+    p{
+      text-align: center;
+    }
+    p:nth-child(2){
+      color: $purple;
+      font-size: 1.2em;
+      margin-bottom: 1em;
+    }
+
+    @media screen and (min-width:$lg){
+      position: relative;
+
+      &:after{
+        content: '';
+        position: absolute;
+        top: 0;
+        right: -1em;
+        height: 100%;
+        border-right: 3px solid $black;
+        border-radius: 10px;
+      }
+      
+      &:last-child{
+        &:after{
+          border: unset;
+        }
+      }
+    }
+  }
+  
+}
+
+.course-home{
+  margin-top: 5em;
+
+  .head-title{
+    position: relative;
+
+    .title{
+      background: $purple;
+      padding: 0.5em 1em;
+      border-radius: 20px 20px 0 0;
+      color: $white;
+      width: max-content;
+      margin: auto;
+      position: absolute;
+      top: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .borderline{
+      height: 18px;
+      width: 100%;
+      background: $purple;
+
+      @media screen and (min-width:$md){
+        background: linear-gradient(90deg,$black,#ff2c9f,$black);
+      }
+    }
+  }
+
+  .grid-course{
+    display: grid;
+    grid-template-columns: 100%;
+
+    @media screen and (min-width:$lg){
+      grid-template-columns: 50% 50%;
+    }
+    
+    .box-article{
+      height: 163px;
+
+      @media screen and (min-width:$md){
+        height: 336px;
+      }
+      @media screen and (min-width:$lg){
+        height: 224px;
+      }
+      @media screen and (min-width:$xl){
+        height: 312px;
+      }
+      @media screen and (min-width:$xxl){
+        height: 422px;
+      }
+
+      iframe{
+        width: 100%!important;
+        height: 100%!important;
+      }
+
+      .article{
+        position: relative;
+        height: 163px;
+
+        @media screen and (min-width:$md){
+          height: 336px;
+        }
+        @media screen and (min-width:$lg){
+          height: 224px;
+        }
+        @media screen and (min-width:$xl){
+          height: 312px;
+        }
+        @media screen and (min-width:$xxl){
+          height: 422px;
+        }
+
+        .pic-article{
+          width: 100%;
+          height: 100%;
+        }
+
+        .title-article{
+          position: absolute;
+          top: 50%;
+          left: 0%;
+          transform: translateY(-50%);
+          width: 100%;
+          height: max-content;
+          padding: 1em 3em;
+          background: #ffffff79;
+
+          @media screen and (min-width:$xl){
+            padding: 3em;
+          }
+          @media screen and (min-width:$xxl){
+            padding: 3em 14em;
+          }
+
+          h2{
+            text-align: center;
+            height: 1.4em;
+            overflow: hidden;
+          }
+          p{
+            text-align: right;
+          }
+        }
+      }
+    }
+
+    .box-course{
+      display: grid;
+      grid-template-columns: 50% 50%;
+      height: 157px;
+
+      @media screen and (min-width:$md){
+        height: 336px;
+      }
+      @media screen and (min-width:$lg){
+        height: 224px;
+      }
+      @media screen and (min-width:$xl){
+        height: 312px;
+      }
+      @media screen and (min-width:$xxl){
+        height: 422px;
+      }
+
+      .detail{
+        height: 100%;
+        padding: .25em .5em;
+
+        @media screen and (min-width:$lg){
+          padding: .5em .75em;
+        }
+        @media screen and (min-width:$xxl){
+          padding: 1em .75em;
+        }
+
+        &.black{
+          background: $black;
+        }
+        &.purple{
+          background: $dark-purple;
+        }
+        &.left{
+          text-align: left;
+        }
+        &.right{
+          text-align: right;
+        }
+
+        p{
+          color: $white;
+        }
+        .course-title{
+          font-weight: bold;
+          margin-bottom: 10px;
+          height: 3.1em;
+          overflow: hidden;
+          word-break: break-all;
+        }
+        .text-detail{
+          max-height: 3.1em;
+          overflow: hidden;
+
+          @media screen and (min-width:$md){
+            max-height: 13.3em;
+          }
+          @media screen and (min-width:$lg){
+            max-height: 5.9em;
+          }
+          @media screen and (min-width:$xl){
+            max-height: 11.6em;
+          }
+          @media screen and (min-width:$xxl){
+            max-height: 17.6em;
+          }
+        }
+
+        >.button{
+          margin: 5px 0;
+        }
+      }
+
+      .picture{
+        display: flex;
+        img{
+          width: 100%;
+          height: 157px;
+
+          @media screen and (min-width:$md){
+            height: 336px;
+          }
+          @media screen and (min-width:$lg){
+            height: 224px;
+          }
+          @media screen and (min-width:$xl){
+            height: 312px;
+          }
+          @media screen and (min-width:$xxl){
+            height: 422px;
+          }
+        }
+      }
+    }
+  }
+
+  >.borderline{
+    width: 100%;
+    height: 15px;
+    background: linear-gradient(90deg,$purple,$black,$purple);
+  }
+}

@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+  <!-- css -->
+  <link rel="stylesheet" href="/css/style.min.css">
+  <link rel="stylesheet" href="/css/home.min.css">
+</head>
+<body>
+  <header>
+    <div class="header container">
+      <div class="logo">
+        <a href="/"><img src="/img/logo/logo.png" alt=""></a>
+      </div>
+  
+      <nav>
+        <ul class="menu">
+          <li class="active"><a href="">home</a></li>
+          <li><a href="">course</a></li>
+          <li><a href="">apply for a course</a></li>
+          <li><a href="">article</a></li>
+          <li><a href="">about us</a></li>
+          <li><a href="">contact us</a></li>
+        </ul>
+  
+        <!-- ไอค่อนรถเข็น หากมีสินค้าในรถเข็นจะแสดงแค่จุดเล็กๆ Element Class ชื่อ dot-cart ไม่มีตัวเลขแสดง -->
+        <div class="cart">
+          <a href=""><img class="icon-svg" src="/img/svg/cart-arrow-down-solid.svg" alt=""></a>
+          <div class="dot-cart"></div>
+        </div>
+  
+        <!-- Element นี้จะหายไปเมื่อ login -->
+        <div class="login-zone">
+          <button class="form-component button primary login">SIGN IN</button>
+          <button class="form-component button BGwhite register">ลงทะเบียน</button>
+        </div>
+
+        <!-- จะแสดง Element นี้ต่อเมื่อ login แล้ว -->
+        <div class="account" style="display: none;" onclick="open_acc_menu()">
+          <div class="username">Hanekawa SudanAtic</div>
+          <div class="avatar"><img src="/img/default.jpg" alt=""></div>
+
+          <ul class="acc-menu">
+            <li><a href="">บัญชีของฉัน</a></li>
+            <li><a href="">ประวัติการสั่งซื้อ</a></li>
+            <li><a href="">ออกจากระบบ</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="hamburger" onclick="open_menu()">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="slide-head swiper-container">
+      <div class="swiper-wrapper">
+        <div class="box swiper-slide">
+          <figure><img src="/img/slide.jpg" alt=""></figure>
+          <div class="detail">
+            <div class="title"><p>Excusive Marketing</p></div>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+              Voluptate officia ex eligendi? Veniam eaque beatae,
+              nulla ratione nobis possimus. 
+              Fugiat optio aspernatur excepturi aliquid sint temporibus illum eos non nemo?
+            </p>
+            <div class="button"><a href=""><button class="form-component button primary round h40">ดูรายละเอียด</button></a></div>
+          </div>
+        </div>
+
+        <div class="box swiper-slide">
+          <figure><img src="/img/slide.jpg" alt=""></figure>
+          <div class="detail">
+            <div class="title"><p>Excusive Marketing</p></div>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+              Voluptate officia ex eligendi? Veniam eaque beatae,
+              nulla ratione nobis possimus. 
+              Fugiat optio aspernatur excepturi aliquid sint temporibus illum eos non nemo?
+            </p>
+            <div class="button"><a href=""><button class="form-component button primary round h40">ดูรายละเอียด</button></a></div>
+          </div>
+        </div>
+
+        <div class="box swiper-slide">
+          <figure><img src="/img/slide.jpg" alt=""></figure>
+          <div class="detail">
+            <div class="title"><p>Excusive Marketing</p></div>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+              Voluptate officia ex eligendi? Veniam eaque beatae,
+              nulla ratione nobis possimus. 
+              Fugiat optio aspernatur excepturi aliquid sint temporibus illum eos non nemo?
+            </p>
+            <div class="button"><a href=""><button class="form-component button primary round h40">ดูรายละเอียด</button></a></div>
+          </div>
+        </div>
+
+        <div class="box swiper-slide">
+          <figure><img src="/img/slide.jpg" alt=""></figure>
+          <div class="detail">
+            <div class="title"><p>Excusive Marketing</p></div>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+              Voluptate officia ex eligendi? Veniam eaque beatae,
+              nulla ratione nobis possimus. 
+              Fugiat optio aspernatur excepturi aliquid sint temporibus illum eos non nemo?
+            </p>
+            <div class="button"><a href=""><button class="form-component button primary round h40">ดูรายละเอียด</button></a></div>
+          </div>
+        </div>
+      </div>
+      <!-- Add Pagination -->
+      <div class="swiper-pagination"></div>
+    </div>
+
+    <div class="home-title">
+      <img src="/img/bg1.png" alt="">
+
+      <div class="detail">
+        <h1>RE-CU ACADEMY</h1>
+
+        <p>เกี่ยวกับเรา</p>
+        <p>
+          RE-CU จัดตั้งขึ้นโดยสมาคมอสังหาริมทรัพย์ไทย ตั้งแต่ปี พ.ศ. 2529 มีวัตถุประสงค์เพื่อสร้างผู้ประกอบการในวงการอสังหาริมทรัพย์ให้มีคุณภาพ คุณธรรม และจริยธรรม
+        </p>
+        <p>
+          เมื่อมีศิษย์เก่าที่จบการศึกษาจากหลักสูตร RE-CU มากขึ้น มีทั้งผู้บริหารระดับสูงทั้งในภาครัฐและภาคเอกชน จึงได้ร่วมกันจัดตั้ง สมาคมผู้บริหารธุรกิจอสังหาริมทรัพย์ จุฬาลงกรณ์มหาวิทยาลัย โดยขณะนี้ (พ.ศ. 2563) มีสมาชิกที่ผ่านหลักสูตรนี้ประมาณ 6,000 คน และเพิ่มขึ้นเรื่อย ๆ ทุกปี
+          ปัจจุบัน RE-CU มีทั้งหมด 6
+        </p>
+      </div>
+    </div>
+
+    <div class="four-box">
+      <div class="box">
+        <figure><img src="/img/svg/storytelling.svg" alt=""></figure>
+        <p>ACADEMIC</p>
+        <p>
+          เน้นความรู้พื้นฐานด้านวิชาการทุกมิติ ที่จะช่วยให้คุณรู้จัก และเข้าใจอสังหาริมทรัพย์มากยิ่งขึ้น
+        </p>
+      </div>
+
+      <div class="box">
+        <figure><img src="/img/svg/speaker.svg" alt=""></figure>
+        <p>SPEAKER</p>
+        <p>
+          ไม่ใช่การบรรยายจากนักวิชาการทั่วไป 
+          แต่เป็นการบรรยายจากผู้เชี่ยวชาญเฉพาะด้านในวงการอสังหาริมทรัพย์ที่มีประสบการณ์ตรง และหาฟังได้ยาก
+        </p>
+      </div>
+
+      <div class="box">
+        <figure><img src="/img/svg/connetion-02.svg" alt=""></figure>
+        <p>CONNECTION</p>
+        <p>
+          กว่า 60 รุ่นที่ผ่านมาทำให้เรามีเครือข่ายของนักพัฒนาอสังหาริมทรัพย์ตัวจริงมากกว่า 5,500 คน และเพิ่มขึ้นเรื่อย ๆ ทุกปี
+        </p>
+      </div>
+
+      <div class="box">
+        <figure><img src="/img/svg/work-03.svg" alt=""></figure>
+        <p>WORKSHOP</p>
+        <p>
+          แม้ทฤษฎีจะอัดแน่น แต่การปฏิบัติเราก็ไม่ทิ้ง มีการแบ่งกลุ่มให้ทดลองทำ Project จริง 
+          สามารถนำมาประยุกต์ใช้กับธุรกิจของตนเองได้
+        </p>
+      </div>
+    </div>
+
+    <div class="course-home">
+      <div class="head-title">
+        <div class="title">หลักสูตร และ บทความ</div>
+        <div class="borderline"></div>
+      </div>
+
+      <div class="grid-course">
+        <div class="box-article">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/_u7z_7uhTy4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <div class="box-course">
+          <div class="detail black left">
+            <p class="course-title">
+              CEO In moder real-estate busiess
+            </p>
+
+            <p class="text-detail">
+              RE-CU จัดตั้งขึ้นโดยสมาคมอสังหาริมทรัพย์ไทย ตั้งแต่ปี พ.ศ. 2529 มีวัตถุประสงค์เพื่อสร้างผู้ประกอบการในวงการอสังหาริมทรัพย์ให้มีคุณภาพ คุณธรรม และจริยธรรม
+              เมื่อมีศิษย์เก่าที่จบการศึกษาจากหลักสูตร RE-CU มากขึ้น มีทั้งผู้บริหารระดับสูงทั้งในภาครัฐและภาคเอกชน จึงได้ร่วมกันจัดตั้ง 
+              สมาคมผู้บริหารธุรกิจอสังหาริมทรัพย์ จุฬาลงกรณ์มหาวิทยาลัย โดยขณะนี้ (พ.ศ. 2563) มีสมาชิกที่ผ่านหลักสูตรนี้ประมาณ 6,000 คน และเพิ่มขึ้นเรื่อย ๆ ทุกปี
+              ปัจจุบัน RE-CU มีทั้งหมด 6
+            </p>
+
+            <div class="button"><button class="form-component button primary round">ดูรายละเอียด</button></div>
+
+            <!-- หากมีจำนวนจำกัด ให้มี Element นี้ -->
+            <div class="limited"><p>รับจำนวนจำกัด</p></div>
+          </div>
+          <div class="picture"><img src="/img/course1.jpg" alt=""></div>
+        </div>
+
+        <div class="box-course">
+          <div class="picture"><img src="/img/course2.jpg" alt=""></div>
+          <div class="detail purple right">
+            <p class="course-title">
+              Junior Yung Entrepreneur
+            </p>
+
+            <p class="text-detail">
+              RE-CU จัดตั้งขึ้นโดยสมาคมอสังหาริมทรัพย์ไทย ตั้งแต่ปี พ.ศ. 2529 มีวัตถุประสงค์เพื่อสร้างผู้ประกอบการในวงการอสังหาริมทรัพย์ให้มีคุณภาพ คุณธรรม และจริยธรรม
+              เมื่อมีศิษย์เก่าที่จบการศึกษาจากหลักสูตร RE-CU มากขึ้น มีทั้งผู้บริหารระดับสูงทั้งในภาครัฐและภาคเอกชน จึงได้ร่วมกันจัดตั้ง 
+              สมาคมผู้บริหารธุรกิจอสังหาริมทรัพย์ จุฬาลงกรณ์มหาวิทยาลัย โดยขณะนี้ (พ.ศ. 2563) มีสมาชิกที่ผ่านหลักสูตรนี้ประมาณ 6,000 คน และเพิ่มขึ้นเรื่อย ๆ ทุกปี
+              ปัจจุบัน RE-CU มีทั้งหมด 6
+            </p>
+
+            <div class="button"><button class="form-component button primary round">ดูรายละเอียด</button></div>
+          </div>
+        </div>
+
+        <div class="box-article">
+          <a href="">
+            <div class="article">
+              <img class="pic-article" src="/img/article2.jpg" alt="">
+              <div class="title-article">
+                <h2>BAVARIAN</h2>
+                <p class="date">25-01-21</p>
+                <p class="author">Hanekawa</p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="box-article">
+          <a href="">
+            <div class="article">
+              <img class="pic-article" src="/img/article1.jpg" alt="">
+              <div class="title-article">
+                <h2>BAVARIAN MOTOR EXPO</h2>
+                <p class="date">25-01-21</p>
+                <p class="author">Hanekawa</p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="box-course">
+          <div class="detail black left">
+            <p class="course-title">
+              HOTEL investment/marketing/operration
+            </p>
+
+            <p class="text-detail">
+              RE-CU จัดตั้งขึ้นโดยสมาคมอสังหาริมทรัพย์ไทย ตั้งแต่ปี พ.ศ. 2529 มีวัตถุประสงค์เพื่อสร้างผู้ประกอบการในวงการอสังหาริมทรัพย์ให้มีคุณภาพ คุณธรรม และจริยธรรม
+              เมื่อมีศิษย์เก่าที่จบการศึกษาจากหลักสูตร RE-CU มากขึ้น มีทั้งผู้บริหารระดับสูงทั้งในภาครัฐและภาคเอกชน จึงได้ร่วมกันจัดตั้ง 
+              สมาคมผู้บริหารธุรกิจอสังหาริมทรัพย์ จุฬาลงกรณ์มหาวิทยาลัย โดยขณะนี้ (พ.ศ. 2563) มีสมาชิกที่ผ่านหลักสูตรนี้ประมาณ 6,000 คน และเพิ่มขึ้นเรื่อย ๆ ทุกปี
+              ปัจจุบัน RE-CU มีทั้งหมด 6
+            </p>
+
+            <div class="button"><button class="form-component button primary round">ดูรายละเอียด</button></div>
+          </div>
+
+          <div class="picture"><img src="/img/course3.jpg" alt=""></div>
+        </div>
+
+        <div class="box-course">
+          <div class="picture"><img src="/img/course4.jpg" alt=""></div>
+          <div class="detail purple right">
+            <p class="course-title">
+              SEnior professional developer
+            </p>
+
+            <p class="text-detail">
+              RE-CU จัดตั้งขึ้นโดยสมาคมอสังหาริมทรัพย์ไทย ตั้งแต่ปี พ.ศ. 2529 มีวัตถุประสงค์เพื่อสร้างผู้ประกอบการในวงการอสังหาริมทรัพย์ให้มีคุณภาพ คุณธรรม และจริยธรรม
+              เมื่อมีศิษย์เก่าที่จบการศึกษาจากหลักสูตร RE-CU มากขึ้น มีทั้งผู้บริหารระดับสูงทั้งในภาครัฐและภาคเอกชน จึงได้ร่วมกันจัดตั้ง 
+              สมาคมผู้บริหารธุรกิจอสังหาริมทรัพย์ จุฬาลงกรณ์มหาวิทยาลัย โดยขณะนี้ (พ.ศ. 2563) มีสมาชิกที่ผ่านหลักสูตรนี้ประมาณ 6,000 คน และเพิ่มขึ้นเรื่อย ๆ ทุกปี
+              ปัจจุบัน RE-CU มีทั้งหมด 6
+            </p>
+
+            <div class="button"><button class="form-component button primary round">ดูรายละเอียด</button></div>
+          </div>
+        </div>
+
+        <div class="box-article">
+          <a href="">
+            <div class="article">
+              <img class="pic-article" src="/img/article3.jpg" alt="">
+              <div class="title-article">
+                <h2>WORK</h2>
+                <p class="date">25-01-21</p>
+                <p class="author">Hanekawa</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="borderline"></div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer">
+      <div class="content-footer container">
+        <div class="logo-address">
+          <div class="logo"><img src="/img/logo/logo2.png" alt=""></div>
+          <div class="address">
+            <p>
+              เลขที่ 24 อาคารยูเซ็นเตอร์ ห้อง L01 ซอยจุฬาลงกรณ์ 42 แขวงวังใหม่ เขตปทุมวัน
+            </p>
+            <p>กรุงเทพฯ 10330</p>
+            <p>โทร. 02-214-1604-5</p>
+          </div>
+        </div>
+  
+        <div class="infomation">
+          <p>รับข้อมูลข่าวสาร</p>
+  
+          <ul>
+            <li><a href="">RE-CU Junior</a></li>
+            <li><a href="">RE-CU Senior</a></li>
+            <li><a href="">RE-CU CEO</a></li>
+            <li><a href="">RE-CU Hotel</a></li>
+            <li><a href="">RE-CU Marketing</a></li>
+            <li><a href="">RE-CU Financial and Cash flow</a></li>
+          </ul>
+        </div>
+  
+        <div class="social">
+          <p>สามารถลงทะเบียนได้นี่นี่</p>
+          <div class="button"><button class="form-component button BGwhite round">REGISTER</button></div>
+  
+          <div class="group-social">
+            <div class="item facebook">
+              <a href="">
+                <img src="/img/svg/facebook.svg" alt="">
+                <span>facebook</span>
+              </a>
+            </div>
+  
+            <div class="item twiter">
+              <a href="">
+                <img src="/img/svg/twiter.svg" alt="">
+                <span>twiter</span>
+              </a>
+            </div>
+  
+            <div class="item instagram">
+              <a href="">
+                <img src="/img/svg/instagram.svg" alt="">
+                <span>instagram</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="copyright">
+      <p>2021 Copyright By <a href="https://www.wynnsoft-solution.com/">Wynnsoft-Solution</a></p>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="/js/app.js"></script>
+  <script src="/js/home.js"></script>
+</body>
+</html>
