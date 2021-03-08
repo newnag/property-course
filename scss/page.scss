@@ -1,0 +1,636 @@
+@import 'variable';
+
+.title-content{
+  margin: 1em 0;
+
+  h1{
+    text-align: center;
+    color: $purple;
+
+    @media screen and (max-width:$sm){
+      font-size: 20px;
+    }
+  }
+}
+
+.cover-page{
+  figure{
+    img{
+      width: 100%;
+    }
+  }
+}
+
+.about-page{
+  .ck{
+    margin: 2em 0;
+    p{
+      img{
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  .social{
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+    margin: 1em 0;
+
+    .facebook,.twiter,.instagram{
+      display: flex;
+      align-items: baseline;
+
+      img{
+        filter: invert(1);
+        width: 20px;
+        height: 20px;
+      }
+
+      span{
+        margin-left: 10px;
+      }
+    }
+  }
+}
+
+.course-page{
+  padding: 0 1em;
+  margin-top: 5em;
+  margin-bottom: 3em;
+
+  .grid-course{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-row-gap: 1em;
+
+    @media screen and (min-width:$md){
+      grid-template-columns: repeat(2,1fr);
+      grid-column-gap: 3em;
+      grid-row-gap: 2em;
+    }
+    @media screen and (min-width:$lg){
+      grid-template-columns: repeat(3,1fr);
+    }
+
+    .box{
+      @media screen and (max-width:$sm){
+        border-bottom: 1px solid $dark-purple;
+        padding-bottom: 1em;
+      }
+
+      figure{
+        text-align: center;
+        margin-bottom: .5em;
+
+        img{
+          height: 250px;
+
+          @media screen and (min-width:$md){
+            height: 305px;
+          }
+          @media screen and (min-width:$xl){
+            height: 338px;
+          }
+          @media screen and (min-width:$xxl){
+            height: 100%;
+          }
+        }
+      }
+
+      .detail{
+        position: relative;
+        height: 220px;
+        background: url(/img/BGbox-course.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position-x: right;
+        background-position-y: bottom;
+
+        @media screen and (min-width:$lg){
+          height: 260px;
+        }
+
+        .title-course{
+          margin-bottom: 1em;
+          
+          h2{
+            font-size: 20px;
+            height: 3em;
+            overflow: hidden;
+          }
+        }
+
+        .description{
+          p{
+            font-size: 15px;
+            height: 4.4em;
+            overflow: hidden;
+          }
+        }
+
+        .button{
+          position: absolute;
+          bottom: 12px;
+        }
+
+        .limited{
+          position: absolute;
+          bottom: 0;
+          color: $purple;
+          font-size: 13px;
+        }
+      }
+    }
+  }
+}
+
+.course-detail-page{
+  padding: 0 1em;
+  margin-top: 2em;
+  margin-bottom: 2em;
+
+  .box-detail{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-row-gap: 3em;
+
+    @media screen and (min-width:$lg){
+      grid-template-columns: 49% 49%;
+      grid-column-gap: 2%;
+    }
+
+    .left{
+      .download-doc{
+        margin-top: 1em;
+        cursor: pointer;
+
+        span{
+          color: $dark-purple;
+          font-size: .8em;
+        }
+      }
+    }
+
+    .right{
+      .social{
+        display: flex;
+        justify-content: space-between;
+
+        @media screen and (min-width:$lg){
+          justify-content: flex-start;
+        }
+
+        .facebook,.twiter,.ig{
+          @media screen and (min-width:$lg){
+            margin-right: 1em;
+          }
+
+          a{
+            display: flex;
+            align-items: baseline;
+          }
+
+          img{
+            height: 20px;
+            width: 20px;
+            filter: invert(1);
+            margin-right: 5px;
+          }
+        }
+      }
+
+      @media screen and (max-width:$sm){
+        .picture{
+          position: relative;
+          height: 250px;
+          overflow: hidden;
+
+          .pic1{
+            img{
+              width: 100%;
+              height: 180px;
+            }
+          }
+
+          .pic2{
+            position: absolute;
+            bottom: 20px;
+            left: 30px;
+
+            img{
+              width: 60%;
+              height: 110px;
+              object-fit: cover;
+            }
+          }
+        }
+      }
+
+      @media screen and (min-width:$md){
+        .picture{
+          position: relative;
+          height: 350px;
+          overflow: hidden;
+          margin-top: 1em;
+  
+          .pic1,.pic2{
+            img{
+              width: 100%;
+            }
+          }
+  
+          .pic1{
+            position: relative;
+            overflow: hidden;
+  
+            &:before{
+              content: "";
+              position: absolute;
+              top: 288px;
+              left: 0;
+              height: 100%;
+              width: 100%;
+              transform: skewY(10deg);
+              background-color: $white;
+            }
+          }
+  
+          .pic2{
+            position: relative;
+            overflow: hidden;
+            top: -318px;
+            left: 30px;
+            width: 50%;
+  
+            &:before{
+              content: "";
+              position: absolute;
+              top: 170px;
+              right: 0;
+              height: 100%;
+              width: 100%;
+              transform: skewY(-6deg);
+              background-color: $white;
+            }
+
+            img{
+              height: 180px;
+            }
+          }
+        }
+      }
+      @media screen and (min-width:$lg){
+        .picture{
+          height: 360px;
+
+          .pic1{
+            &:before{
+              top: 282px;
+            }
+          }
+          .pic2{
+            top: -130px;
+
+            &:before{
+              top: 140px;
+            }
+
+            img{
+              height: 150px;
+            }
+          }
+        }
+      }
+      @media screen and (min-width:$xl){
+        .picture{
+          height: 400px;
+
+          .pic1{
+            &:before{
+              top: 345px;
+            }
+          }
+          .pic2{
+            top: -170px;
+
+            &:before{
+              top: 130;
+            }
+
+            img{
+              height: 150px;
+            }
+          }
+        }
+      }
+      @media screen and (min-width:$xxl){
+        .picture{
+          height: 400px;
+
+          .pic1{
+            &:before{
+              top: 333px;
+            }
+          }
+          .pic2{
+            top: -270px;
+
+            &:before{
+              top: 130px;
+            }
+
+            img{
+              height: 150px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .video{
+    margin: 2em 0;
+
+    @media screen and (min-width:$lg){
+      padding: 0 3em;
+    }
+    @media screen and (min-width:$xl){
+      padding: 0 10em;
+    }
+    @media screen and (min-width:$xxl){
+      padding: 0;
+      text-align: center;
+    }
+
+    iframe{
+      width: 100%!important;
+      height: 250px!important;
+
+      @media screen and (min-width:$md){
+        height: 350px!important;
+      }
+      @media screen and (min-width:$lg){
+        height: 500px!important;
+      }
+      @media screen and (min-width:$xxl){
+        width: 960px!important;
+        height: 420px!important;
+      }
+    }
+  }
+
+  .grid-info{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-row-gap: 2em;
+    padding: 0 3em;
+
+    @media screen and (min-width:$md){
+      grid-template-columns: repeat(2,1fr);
+      grid-column-gap: 2em;
+    }
+    @media screen and (min-width:$lg){
+      grid-template-columns: repeat(4,1fr);
+      padding: 0;
+    }
+    @media screen and (min-width:$xxl){
+      padding: 0 10em;
+    }
+
+    .box{
+      position: relative;
+      background-color: $purple;
+      padding: 2em;
+      border-radius: 10px;
+
+      &:after{
+        content: '';
+        background: url(/img/BGgridinfo.png);
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 50%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+
+      p{
+        color: $white;
+        font-size: 1.2em;
+        margin: .5em 0;
+      }
+      
+      p:nth-child(3){
+        font-size: .8em;
+      }
+
+      .icon{
+        img{
+          width: 28px;
+          height: 28px;
+        }
+      }
+
+      .ps{
+        font-size: .8em;
+      }
+    }
+  }
+
+  .regis-button{
+    text-align: center;
+    margin: 2em 0;
+
+    button{
+      width: 100px;
+    }
+  }
+
+  .form-regis{
+    margin: 4em 0;
+    display: grid;
+    grid-template-columns: 100%;
+    
+    @media screen and (min-width:$lg){
+      grid-template-columns: repeat(2,1fr);
+      grid-column-gap: 3em;
+    }
+
+    .left,.right{
+      .pad{
+        margin-left: 1em;
+      }
+
+      .head-form{
+        background-color: $purple;
+        padding: 5px 0;
+        padding-left: 1em;
+        border-radius: 5px;
+
+        p{
+          color: $white;
+          font-weight: bold;
+          font-size: 1.2em;
+        }
+      }
+
+      .description{
+        p{
+          padding: .5em 0;
+          color: gray;
+        }
+      }
+
+      .upload-img{
+        display: flex;
+
+        .pic{
+          img{
+            width: 122px;
+            height: 156px;
+          }
+        }
+
+        .upload-zone{
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          margin-left: 2em;
+
+          .ps{
+            margin-top: .5em;
+            width: 70%;
+
+            p{
+              color: gray;
+            }
+          }
+        }
+      }
+
+      .idcard{
+        margin-top: 1em;
+        margin-bottom: 1em;
+
+        .grid-input{
+          margin-top: .5em;
+          display: grid;
+          grid-template-columns: 20% 78%;
+          grid-column-gap: 2%
+        }
+      }
+
+      .personal{
+        .bg-pad,.nm-pad{
+          .h-form{
+            color: $purple;
+            font-size: 1.2em;
+            margin-top: 1em;
+            margin-bottom: 1em;
+          }
+        }
+
+        .bg-pad{
+          background-color: #EEEEEE;
+          border-radius: 5px;
+          padding: 1em;
+        }
+        .nm-pad{
+          padding: 1em;
+        }
+      }
+    }
+    .right{
+      .h-form{
+        color: $purple;
+        font-size: 1.2em;
+        margin-bottom: 1em;
+      }
+
+      .nm-pad{
+        padding: 1em;
+      }
+
+      .edu{
+        .box{
+          padding-bottom: 1em;
+          border-bottom: 1px dashed gray;
+          margin-bottom: 1em;
+        }
+
+        .add-education{
+          width: max-content;
+          margin: 1em auto;
+          cursor: pointer;
+
+          img{
+            width: 15px;
+            height: 15px;
+          }
+          span{
+            color: $purple;
+          }
+        }
+      }
+
+      .occupation{
+        margin-bottom: 3em;
+        .gcheckbox{
+          display: grid;
+          grid-template-columns: repeat(5,1fr);
+          grid-row-gap: 1em;
+          margin-top: 2em;
+          margin-bottom: 1em;
+        }
+      }
+
+      .type-business{
+        margin-bottom: 3em;
+        .choice-business{
+          display: grid;
+          grid-template-columns: repeat(2,40%);
+          grid-gap: 1em;
+          margin-bottom: 1em;
+        }
+      }
+
+      .knowme{
+        margin-bottom: 3em;
+        .choice{
+          display: flex;
+          flex-wrap: wrap;
+
+          .box-radio{
+            margin-right: 1em;
+          }
+        }
+
+        .other-choice{
+          margin-top: 1em;
+        }
+      }
+
+      .tax{
+        padding-top: 1em;
+        textarea{
+          margin-top: .5em;
+        }
+      }
+    }
+
+    .button-save{
+      grid-column: 1/3;
+      text-align: center;
+    }
+  }
+
+  .map{
+    iframe{
+      width: 100%!important;
+      height: 300px!important;
+    }
+  }
+}

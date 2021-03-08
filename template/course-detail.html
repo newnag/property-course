@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+  <!-- css -->
+  <link rel="stylesheet" href="/css/style.min.css">
+  <link rel="stylesheet" href="/css/page.min.css">
+</head>
+<body>
+  <header>
+    <div class="header container">
+      <div class="logo">
+        <a href="/"><img src="/img/logo/logo.png" alt=""></a>
+      </div>
+  
+      <nav>
+        <ul class="menu">
+          <li class="active"><a href="">home</a></li>
+          <li><a href="">course</a></li>
+          <li><a href="">apply for a course</a></li>
+          <li><a href="">article</a></li>
+          <li><a href="">about us</a></li>
+          <li><a href="">contact us</a></li>
+        </ul>
+  
+        <!-- ไอค่อนรถเข็น หากมีสินค้าในรถเข็นจะแสดงแค่จุดเล็กๆ Element Class ชื่อ dot-cart ไม่มีตัวเลขแสดง -->
+        <div class="cart">
+          <a href=""><img class="icon-svg" src="/img/svg/cart-arrow-down-solid.svg" alt=""></a>
+          <div class="dot-cart"></div>
+        </div>
+  
+        <!-- Element นี้จะหายไปเมื่อ login -->
+        <div class="login-zone">
+          <button class="form-component button primary login">SIGN IN</button>
+          <button class="form-component button BGwhite register">ลงทะเบียน</button>
+        </div>
+
+        <!-- จะแสดง Element นี้ต่อเมื่อ login แล้ว -->
+        <div class="account" style="display: none;" onclick="open_acc_menu()">
+          <div class="username">Hanekawa SudanAtic</div>
+          <div class="avatar"><img src="/img/default.jpg" alt=""></div>
+
+          <ul class="acc-menu">
+            <li><a href="">บัญชีของฉัน</a></li>
+            <li><a href="">ประวัติการสั่งซื้อ</a></li>
+            <li><a href="">ออกจากระบบ</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="hamburger" onclick="open_menu()">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="cover-page"><figure><a href=""><img src="/img/cover1.png" alt=""></a></figure></div>
+
+    <div class="title-content">
+      <h1>RE-CU CEO (Top Decision Maker)</h1>
+    </div>
+
+    <div class="course-detail-page container">
+      <div class="box-detail">
+        <div class="left">
+          <div class="ck">
+            <p>ck ck ck</p>
+            <p>ck ck ck</p>
+            <p>ck ck ck</p>
+            <p>ck ck ck</p>
+            <p>ck ck ck</p>
+            <p>ck ck ck</p>
+            <p>ck ck ck</p>
+            <p>ck ck ck</p>
+            <p>ck ck ck</p>
+            <p>ck ck ck</p>
+            <p>ck ck ck</p>
+            <p>ck ck ck</p>
+            <p>ck ck ck</p>
+            <p>ck ck ck</p>
+            <p>ck ck ck</p>
+            <p>ck ck ck</p>
+            <p>ck ck ck</p>
+            <p>ck ck ck</p>
+          </div>
+
+          <div class="download-doc">
+            <img class="icon-svg" src="/img/svg/file-alt-solid.svg" alt="">
+            <span>ดาวโหลดเอกสารต่างๆ เกี่ยวกับคอสเรียนนี้</span>
+          </div>
+        </div>
+        <div class="right">
+          <div class="social">
+            <div class="facebook"><a href=""><img src="/img/svg/facebook.svg" alt=""> facebook</a></div>
+            <div class="twiter"><a href=""><img src="/img/svg/twiter.svg" alt=""> twiter</a></div>
+            <div class="ig"><a href=""><img src="/img/svg/instagram.svg" alt=""> instagram</a></div>
+          </div>
+
+          <div class="picture">
+            <div class="pic1"><img src="/img/yaniv-knobel-9_fZaxzvGuA-unsplash.jpg" alt=""></div>
+            <div class="pic2"><img src="/img/andrew-neel-QLqNalPe0RA-unsplash.jpg" alt=""></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="video">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/GK7DabtKfFE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+
+      <div class="grid-info">
+        <div class="box">
+          <div class="icon"><img src="/img/svg/calendar-day-solid.svg" alt=""></div>
+          <p>ระหว่างวันที่</p>
+          <p>24 ส.ค–16 พ.ย 2562</p>
+        </div>
+
+        <div class="box">
+          <div class="icon"><img src="/img/svg/clock-solid.svg" alt=""></div>
+          <p>รวมประมาณ</p>
+          <p>130 ชั่วโมง</p>
+        </div>
+
+        <div class="box">
+          <div class="icon"><img src="/img/svg/map-marker-alt-solid.svg" alt=""></div>
+          <p>สถานที่</p>
+          <p>ต่างประเทศ</p>
+        </div>
+
+        <div class="box">
+          <div class="icon"><img src="/img/svg/coins-solid.svg" alt=""></div>
+          <p>ค่าอบรม</p>
+          <p>239,000 บาท</p>
+          <p class="ps">(รวมค่าศึกษาดูงาน)</p>
+        </div>
+      </div>
+
+      <!-- <div class="regis-button"><button class="form-component button primary round">สมัคร</button></div> -->
+
+      <div class="form-regis">
+        <div class="left">
+          <div class="head-form">
+            <p>ข้อมูลส่วนตัว</p>
+          </div>
+
+          <div class="description pad"><p>* กรุณากรอกข้อมูลในช่องที่มี (*) ให้ครบถ้วน</p></div>
+
+          <div class="upload-img pad">
+            <div class="pic"><img src="" alt=""></div>
+            <div class="upload-zone">
+              <div class="button-upload"><button class="form-component button primary round">Choose File</button></div>
+              <div class="ps">
+                <p>
+                  อัพโหลดได้เฉพาะไฟล์รูปภาพ ประเภท jpg png gif และมีขนาดไม่เกิน 3 Mb
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="idcard pad">
+            <p>( เลขที่บัตรประชาชน / ID Card ) ( หนังสือเดินทาง / Passport ID) *</p>
+            <div class="grid-input">
+              <select name="" id="" class="form-component input">
+                <option value="">ID CARD</option>
+                <option value="">PASSPORT ID</option>
+              </select>
+
+              <input type="text" placeholder="1234567890" class="form-component input">
+            </div>
+          </div>
+
+          <div class="personal">
+            <div class="bg-pad grid2">
+              <div class="box-input f-col">
+                <label for="">คำนำหน้า</label>
+                <input type="text" class="form-component input">
+              </div>
+
+              <div class="box-input">
+                <label for="">ชื่อ (ไทย) *</label>
+                <input type="text" class="form-component input">
+              </div>
+
+              <div class="box-input">
+                <label for="">นามสกุล (ไทย) *</label>
+                <input type="text" class="form-component input">
+              </div>
+
+              <div class="box-input">
+                <label for="">ชื่อ (อังกฤษ) *</label>
+                <input type="text" class="form-component input">
+              </div>
+
+              <div class="box-input">
+                <label for="">นามสกุล (อังกฤษ) *</label>
+                <input type="text" class="form-component input">
+              </div>
+
+              <div class="box-input">
+                <label for="">ชื่อเล่น *</label>
+                <input type="text" class="form-component input">
+              </div>
+            </div>
+
+            <div class="nm-pad grid6">
+              <div class="box-input col-1_2">
+                <label for="">วัน *</label>
+                <input type="text" class="form-component input">
+              </div>
+
+              <div class="box-input col-2_4">
+                <label for="">เดือน *</label>
+                <input type="text" class="form-component input">
+              </div>
+
+              <div class="box-input col-4_6">
+                <label for="">ปีเกิด *</label>
+                <input type="text" class="form-component input">
+              </div>
+
+              <div class="box-input col-1_3">
+                <label for="">ศาสนา</label>
+                <input type="text" class="form-component input">
+              </div>
+
+              <div class="box-input col-3_4">
+                <label for="">อายุ</label>
+                <input type="text" class="form-component input">
+              </div>
+
+              <div class="box-input half1-col">
+                <label for="">โทรศัพท์มือถือ *</label>
+                <input type="text" class="form-component input">
+              </div>
+
+              <div class="box-input half2-col">
+                <label for="">Line ID:</label>
+                <input type="text" class="form-component input">
+              </div>
+
+              <div class="box-input f-col">
+                <label for="">Email:</label>
+                <input type="text" class="form-component input">
+              </div>
+
+              <div class="box-input f-col">
+                <label for="">Facebook:</label>
+                <input type="text" class="form-component input">
+              </div>
+
+              <div class="box-input f-col">
+                <label for="">Instagram:</label>
+                <input type="text" class="form-component input">
+              </div>
+
+              <div class="box-input f-col">
+                <label for="">Twitter:</label>
+                <input type="text" class="form-component input">
+              </div>
+
+              <h3 class="h-form f-col">ที่อยู่ที่สามารถติดต่อได้</h3>
+
+              <div class="box-input col-1_3">
+                <label for="">เลขที่*</label>
+                <input type="text" class="form-component input">
+              </div>
+
+              <div class="box-input col-3_4">
+                <label for="">หมู่ที่</label>
+                <input type="text" class="form-component input">
+              </div>
+
+              <div class="box-input f-col">
+                <label for="">อาคาร/หมู่บ้าน</label>
+                <input type="text" class="form-component input">
+              </div>
+
+              <div class="box-input half1-col">
+                <label for="">ซอย</label>
+                <input type="text" class="form-component input">
+              </div>
+
+              <div class="box-input half2-col">
+                <label for="">ถนน</label>
+                <input type="text" class="form-component input">
+              </div>
+
+              <div class="box-input half1-col">
+                <label for="">ตำบล/แขวง*</label>
+                <input type="text" class="form-component input">
+              </div>
+
+              <div class="box-input half2-col">
+                <label for="">อำเภอ/เขต*</label>
+                <input type="text" class="form-component input">
+              </div>
+
+              <div class="box-input half1-col">
+                <label for="">จังหวัด*</label>
+                <input type="text" class="form-component input">
+              </div>
+
+              <div class="box-input half2-col">
+                <label for="">รหัสไปรษณีย์*</label>
+                <input type="text" class="form-component input">
+              </div>
+
+              <h3 class="h-form f-col">ข้อมูลบริษัท</h3>
+
+              <div class="box-input f-col">
+                <label for="">ชื่อบริษัท/หน่วยงาน</label>
+                <input type="text" class="form-component input">
+              </div>
+
+              <div class="box-input half1-col">
+                <label for="">ตำแหน่ง</label>
+                <input type="text" class="form-component input">
+              </div>
+
+              <div class="box-input half2-col">
+                <label for="">อายุงาน/ปี</label>
+                <input type="text" class="form-component input">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="right">
+          <h3 class="h-form f-col">ข้อมูลผู้ประสานงาน/ เลขานุการ ที่ท่านต้องการให้ติดต่อ</h3>
+
+          <div class="nm-pad grid6">
+            <div class="box-input half1-col">
+              <label for="">ชื่อ</label>
+              <input type="text" class="form-component input">
+            </div>
+
+            <div class="box-input half2-col">
+              <label for="">นามสกุล</label>
+              <input type="text" class="form-component input">
+            </div>
+
+            <div class="box-input half1-col">
+              <label for="">โทรศัพท์มือถือ</label>
+              <input type="tel" class="form-component input">
+            </div>
+
+            <div class="box-input half2-col">
+              <label for="">Line ID</label>
+              <input type="text" class="form-component input">
+            </div>
+
+            <div class="box-input f-col">
+              <label for="">Email</label>
+              <input type="email" class="form-component input">
+            </div>
+          </div>
+
+          <div class="head-form">
+            <p>ข้อมูลด้านการศึกษา</p>
+          </div>
+
+          <div class="description pad"><p>* กรุณากรอกข้อมูลในช่องที่มี (*) ให้ครบถ้วน</p></div>
+
+          <div class="nm-pad edu">
+            <div class="box">
+              <div class="box-input">
+                <label for="">ระดับการศึกษา</label>
+                <input type="text" class="form-component input">
+              </div>
+  
+              <div class="box-input">
+                <label for="">ภาควิชา-สาขาวิชา</label>
+                <input type="text" class="form-component input">
+              </div>
+  
+              <div class="box-input">
+                <label for="">คณะ</label>
+                <input type="tel" class="form-component input">
+              </div>
+  
+              <div class="box-input">
+                <label for="">ชื่อสถานศึกษา</label>
+                <input type="text" class="form-component input">
+              </div>
+  
+              <div class="checkbox">
+                <input type="checkbox" id="check-edu">
+                <label for="check-edu">กำลังศึกษาอยู่</label>
+              </div>
+            </div>
+            
+            <div class="add-education">
+              <img src="/img/svg/plus-05.svg" alt="">
+              <span>เพิ่มประวัติการศึกษา</span>
+            </div>
+          </div>
+
+          <div class="head-form">
+            <p>ลักษณะงานที่ท่านทำในปัจจุบัน</p>
+          </div>
+
+          <div class="occupation pad">
+            <div class="gcheckbox">
+              <div class="checkbox">
+                <input type="checkbox" id="occ-1">
+                <label for="occ-1">สถาปัตยกรรม</label>
+              </div>
+
+              <div class="checkbox">
+                <input type="checkbox" id="occ-2">
+                <label for="occ-2">กฎหมาย</label>
+              </div>
+
+              <div class="checkbox">
+                <input type="checkbox" id="occ-3">
+                <label for="occ-3">วิศวกรรม</label>
+              </div>
+
+              <div class="checkbox">
+                <input type="checkbox" id="occ-4">
+                <label for="occ-4">บริหาร</label>
+              </div>
+
+              <div class="checkbox">
+                <input type="checkbox" id="occ-5">
+                <label for="occ-5">การเงิน</label>
+              </div>
+
+              <div class="checkbox">
+                <input type="checkbox" id="occ-6">
+                <label for="occ-6">การตลาด</label>
+              </div>
+
+              <div class="checkbox">
+                <input type="checkbox" id="occ-7">
+                <label for="occ-7">การตลาด</label>
+              </div>
+
+              <div class="checkbox">
+                <input type="checkbox" id="occ-8">
+                <label for="occ-8">แพทย์/ทันตแพทย์</label>
+              </div>
+            </div>
+            <div class="other-checkbox">
+              <input type="checkbox" id="other-check">
+              <label for="other-check">อื่นๆ(โปรดระบุ)</label>
+            </div>
+            <input type="text" placeholder="อื่นๆ" class="form-component input">
+          </div>
+
+          <div class="head-form">
+            <p>ประเภทธุรกิจอสังหาริมทรัพย์ที่ท่านสนใจเป็นพิเศษ</p>
+          </div>
+
+          <div class="description pad"><p>ตอบได้เพียง 1 ข้อ</p></div>
+
+          <div class="type-business pad">
+            <div class="choice-business">
+              <div class="list">
+                <input type="radio" name="type-busi" id="busi-1">
+                <label for="busi-1">Condominium (High Rise)</label>
+              </div>
+
+              <div class="list">
+                <input type="radio" name="type-busi" id="busi-2">
+                <label for="busi-2">Condominium (Low Rise)</label>
+              </div>
+
+              <div class="list">
+                <input type="radio" name="type-busi" id="busi-3">
+                <label for="busi-3">Single House/Town House</label>
+              </div>
+
+              <div class="list">
+                <input type="radio" name="type-busi" id="busi-4">
+                <label for="busi-4">Service Apartment/Apartment</label>
+              </div>
+
+              <div class="list">
+                <input type="radio" name="type-busi" id="busi-5">
+                <label for="busi-5">Mixed Use Project</label>
+              </div>
+
+              <div class="list">
+                <input type="radio" name="type-busi" id="busi-6">
+                <label for="busi-6">Community Mall/Co-Working Space</label>
+              </div>
+
+              <div class="list">
+                <input type="radio" name="type-busi" id="busi-7">
+                <label for="busi-7">การลงทุนในต่างประเทศ CLMV</label>
+              </div>
+
+              <div class="list">
+                <input type="radio" name="type-busi" id="busi-8">
+                <label for="busi-8">Hotel/Resort</label>
+              </div>
+            </div>
+
+            <div class="other-business">
+              <div class="list">
+                <input type="radio" name="type-busi" id="busi-other">
+                <label for="busi-other">อื่นๆ (โปรดระบุ)</label>
+              </div>
+              <input type="text" class="form-component input" placeholder="อื่นๆ">
+            </div>
+          </div>
+
+          <div class="head-form">
+            <p>ท่านทราบข่าวการอบรมครั้งนี้จากสื่อประเภทใด</p>
+          </div>
+
+          <div class="nm-pad knowme">
+            <div class="choice">
+              <div class="box-radio">
+                <input type="radio" name="social" id="family">
+                <label for="family">เพื่อน/ญาติ/คนในครอบครัว</label>
+              </div>
+
+              <div class="box-radio">
+                <input type="radio" name="social" id="website">
+                <label for="website">www.re-cu.com</label>
+              </div>
+
+              <div class="box-radio">
+                <input type="radio" name="social" id="face">
+                <label for="face">Facebook</label>
+              </div>
+
+              <div class="box-radio">
+                <input type="radio" name="social" id="line">
+                <label for="line">Line</label>
+              </div>
+            </div>
+            <div class="other-choice">
+              <input type="radio" name="social" id="other-social">
+              <label for="other-social">อื่นๆ (โปรดระบุ)</label>
+            </div>
+            <input type="text" class="form-component input" placeholder="อื่นๆ">
+          </div>
+
+          <div class="head-form">
+            <p>ท่านมีความประสงค์ให้ออกใบเสร็จในนาม</p>
+          </div>
+
+          <div class="tax">
+            <label for="">กรอกรายละเอียด</label>
+            <textarea name="" id="" cols="30" rows="5" class="form-component text"></textarea>
+          </div>
+        </div>
+
+        <div class="button-save"><button class="form-component button primary round">ยืนยันการสมัคร</button></div>
+      </div>
+
+      <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.8081503046224!2d100.56262891527399!3d13.730062101494994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e29f03056d0be9%3A0x7fba70a24598c9bc!2sKiss%20Bangkok%20Massage!5e0!3m2!1sth!2sth!4v1614917523134!5m2!1sth!2sth" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </div>
+    
+  </main>
+
+  <footer>
+    <div class="footer">
+      <div class="content-footer container">
+        <div class="logo-address">
+          <div class="logo"><img src="/img/logo/logo2.png" alt=""></div>
+          <div class="address">
+            <p>
+              เลขที่ 24 อาคารยูเซ็นเตอร์ ห้อง L01 ซอยจุฬาลงกรณ์ 42 แขวงวังใหม่ เขตปทุมวัน
+            </p>
+            <p>กรุงเทพฯ 10330</p>
+            <p>โทร. 02-214-1604-5</p>
+          </div>
+        </div>
+  
+        <div class="infomation">
+          <p>รับข้อมูลข่าวสาร</p>
+  
+          <ul>
+            <li><a href="">RE-CU Junior</a></li>
+            <li><a href="">RE-CU Senior</a></li>
+            <li><a href="">RE-CU CEO</a></li>
+            <li><a href="">RE-CU Hotel</a></li>
+            <li><a href="">RE-CU Marketing</a></li>
+            <li><a href="">RE-CU Financial and Cash flow</a></li>
+          </ul>
+        </div>
+  
+        <div class="social">
+          <p>สามารถลงทะเบียนได้นี่นี่</p>
+          <div class="button"><button class="form-component button BGwhite round">REGISTER</button></div>
+  
+          <div class="group-social">
+            <div class="item facebook">
+              <a href="">
+                <img src="/img/svg/facebook.svg" alt="">
+                <span>facebook</span>
+              </a>
+            </div>
+  
+            <div class="item twiter">
+              <a href="">
+                <img src="/img/svg/twiter.svg" alt="">
+                <span>twiter</span>
+              </a>
+            </div>
+  
+            <div class="item instagram">
+              <a href="">
+                <img src="/img/svg/instagram.svg" alt="">
+                <span>instagram</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="copyright">
+      <p>2021 Copyright By <a href="https://www.wynnsoft-solution.com/">Wynnsoft-Solution</a></p>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="/js/app.js"></script>
+  <script src="/js/home.js"></script>
+</body>
+</html>
