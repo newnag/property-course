@@ -15,3 +15,10 @@ window.onscroll = function(e){
     document.querySelector('header').classList.remove('scroll')
   }
 }
+
+function icon_selectBank(that){
+  let val = that.options[that.selectedIndex].getAttribute('data-icon')
+  console.log(val)
+
+  document.getElementById('iconIMG').src = val
+}

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+  <!-- css -->
+  <link rel="stylesheet" href="/css/style.min.css">
+  <link rel="stylesheet" href="/css/page.min.css">
+</head>
+<body>
+  <header>
+    <div class="header container">
+      <div class="logo">
+        <a href="/"><img src="/img/logo/logo.png" alt=""></a>
+      </div>
+  
+      <nav>
+        <ul class="menu">
+          <li class="active"><a href="">home</a></li>
+          <li><a href="">course</a></li>
+          <li><a href="">apply for a course</a></li>
+          <li><a href="">article</a></li>
+          <li><a href="">about us</a></li>
+          <li><a href="">contact us</a></li>
+        </ul>
+  
+        <!-- ไอค่อนรถเข็น หากมีสินค้าในรถเข็นจะแสดงแค่จุดเล็กๆ Element Class ชื่อ dot-cart ไม่มีตัวเลขแสดง -->
+        <div class="cart">
+          <a href=""><img class="icon-svg" src="/img/svg/cart-arrow-down-solid.svg" alt=""></a>
+          <div class="dot-cart"></div>
+        </div>
+  
+        <!-- Element นี้จะหายไปเมื่อ login -->
+        <div class="login-zone">
+          <button class="form-component button primary login">SIGN IN</button>
+          <button class="form-component button BGwhite register">ลงทะเบียน</button>
+        </div>
+
+        <!-- จะแสดง Element นี้ต่อเมื่อ login แล้ว -->
+        <div class="account" style="display: none;" onclick="open_acc_menu()">
+          <div class="username">Hanekawa SudanAtic</div>
+          <div class="avatar"><img src="/img/default.jpg" alt=""></div>
+
+          <ul class="acc-menu">
+            <li><a href="">บัญชีของฉัน</a></li>
+            <li><a href="">ประวัติการสั่งซื้อ</a></li>
+            <li><a href="">ออกจากระบบ</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="hamburger" onclick="open_menu()">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="title-content"><h1>Article</h1></div>
+
+    <div class="article-page container">
+      <div class="grid-box">
+        <div class="box">
+          <img src="/img/coronavirus.png" alt="">
+          <div class="detail">
+            <div class="date"><p>วันที่โพส 25/01/2021</p></div>
+            <div class="title">
+              <h2>รัฐบาลสู้กับ CRISIS : COVID-19 หลังจากที่เศรษฐกิจ</h2>
+            </div>
+          </div>
+          <div class="readmore">
+            <div class="button"><button class="form-component button"><a href="">ดูรายละเอียด</a></button></div>
+          </div>
+        </div>
+
+        <div class="box">
+          <img src="/img/coronavirus.png" alt="">
+          <div class="detail">
+            <div class="date"><p>วันที่โพส 25/01/2021</p></div>
+            <div class="title">
+              <h2>รัฐบาลสู้กับ CRISIS : COVID-19 หลังจากที่เศรษฐกิจ</h2>
+            </div>
+          </div>
+          <div class="readmore">
+            <div class="button"><button class="form-component button"><a href="">ดูรายละเอียด</a></button></div>
+          </div>
+        </div>
+
+        <div class="box">
+          <img src="/img/coronavirus.png" alt="">
+          <div class="detail">
+            <div class="date"><p>วันที่โพส 25/01/2021</p></div>
+            <div class="title">
+              <h2>รัฐบาลสู้กับ CRISIS : COVID-19 หลังจากที่เศรษฐกิจ</h2>
+            </div>
+          </div>
+          <div class="readmore">
+            <div class="button"><button class="form-component button"><a href="">ดูรายละเอียด</a></button></div>
+          </div>
+        </div>
+
+        <div class="box">
+          <img src="/img/coronavirus.png" alt="">
+          <div class="detail">
+            <div class="date"><p>วันที่โพส 25/01/2021</p></div>
+            <div class="title">
+              <h2>รัฐบาลสู้กับ CRISIS : COVID-19 หลังจากที่เศรษฐกิจ</h2>
+            </div>
+          </div>
+          <div class="readmore">
+            <div class="button"><button class="form-component button"><a href="">ดูรายละเอียด</a></button></div>
+          </div>
+        </div>
+
+        <div class="box">
+          <img src="/img/coronavirus.png" alt="">
+          <div class="detail">
+            <div class="date"><p>วันที่โพส 25/01/2021</p></div>
+            <div class="title">
+              <h2>รัฐบาลสู้กับ CRISIS : COVID-19 หลังจากที่เศรษฐกิจ</h2>
+            </div>
+          </div>
+          <div class="readmore">
+            <div class="button"><button class="form-component button"><a href="">ดูรายละเอียด</a></button></div>
+          </div>
+        </div>
+
+        <div class="box">
+          <img src="/img/coronavirus.png" alt="">
+          <div class="detail">
+            <div class="date"><p>วันที่โพส 25/01/2021</p></div>
+            <div class="title">
+              <h2>รัฐบาลสู้กับ CRISIS : COVID-19 หลังจากที่เศรษฐกิจ</h2>
+            </div>
+          </div>
+          <div class="readmore">
+            <div class="button"><button class="form-component button"><a href="">ดูรายละเอียด</a></button></div>
+          </div>
+        </div>
+
+        <div class="box">
+          <img src="/img/coronavirus.png" alt="">
+          <div class="detail">
+            <div class="date"><p>วันที่โพส 25/01/2021</p></div>
+            <div class="title">
+              <h2>รัฐบาลสู้กับ CRISIS : COVID-19 หลังจากที่เศรษฐกิจ</h2>
+            </div>
+          </div>
+          <div class="readmore">
+            <div class="button"><button class="form-component button"><a href="">ดูรายละเอียด</a></button></div>
+          </div>
+        </div>
+
+        <div class="box">
+          <img src="/img/coronavirus.png" alt="">
+          <div class="detail">
+            <div class="date"><p>วันที่โพส 25/01/2021</p></div>
+            <div class="title">
+              <h2>รัฐบาลสู้กับ CRISIS : COVID-19 หลังจากที่เศรษฐกิจ</h2>
+            </div>
+          </div>
+          <div class="readmore">
+            <div class="button"><button class="form-component button"><a href="">ดูรายละเอียด</a></button></div>
+          </div>
+        </div>
+
+        <div class="box">
+          <img src="/img/coronavirus.png" alt="">
+          <div class="detail">
+            <div class="date"><p>วันที่โพส 25/01/2021</p></div>
+            <div class="title">
+              <h2>รัฐบาลสู้กับ CRISIS : COVID-19 หลังจากที่เศรษฐกิจ</h2>
+            </div>
+          </div>
+          <div class="readmore">
+            <div class="button"><button class="form-component button"><a href="">ดูรายละเอียด</a></button></div>
+          </div>
+        </div>
+
+        <div class="box">
+          <img src="/img/coronavirus.png" alt="">
+          <div class="detail">
+            <div class="date"><p>วันที่โพส 25/01/2021</p></div>
+            <div class="title">
+              <h2>รัฐบาลสู้กับ CRISIS : COVID-19 หลังจากที่เศรษฐกิจ</h2>
+            </div>
+          </div>
+          <div class="readmore">
+            <div class="button"><button class="form-component button"><a href="">ดูรายละเอียด</a></button></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer">
+      <div class="content-footer container">
+        <div class="logo-address">
+          <div class="logo"><img src="/img/logo/logo2.png" alt=""></div>
+          <div class="address">
+            <p>
+              เลขที่ 24 อาคารยูเซ็นเตอร์ ห้อง L01 ซอยจุฬาลงกรณ์ 42 แขวงวังใหม่ เขตปทุมวัน
+            </p>
+            <p>กรุงเทพฯ 10330</p>
+            <p>โทร. 02-214-1604-5</p>
+          </div>
+        </div>
+  
+        <div class="infomation">
+          <p>รับข้อมูลข่าวสาร</p>
+  
+          <ul>
+            <li><a href="">RE-CU Junior</a></li>
+            <li><a href="">RE-CU Senior</a></li>
+            <li><a href="">RE-CU CEO</a></li>
+            <li><a href="">RE-CU Hotel</a></li>
+            <li><a href="">RE-CU Marketing</a></li>
+            <li><a href="">RE-CU Financial and Cash flow</a></li>
+          </ul>
+        </div>
+  
+        <div class="social">
+          <p>สามารถลงทะเบียนได้นี่นี่</p>
+          <div class="button"><button class="form-component button BGwhite round">REGISTER</button></div>
+  
+          <div class="group-social">
+            <div class="item facebook">
+              <a href="">
+                <img src="/img/svg/facebook.svg" alt="">
+                <span>facebook</span>
+              </a>
+            </div>
+  
+            <div class="item twiter">
+              <a href="">
+                <img src="/img/svg/twiter.svg" alt="">
+                <span>twiter</span>
+              </a>
+            </div>
+  
+            <div class="item instagram">
+              <a href="">
+                <img src="/img/svg/instagram.svg" alt="">
+                <span>instagram</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="copyright">
+      <p>2021 Copyright By <a href="https://www.wynnsoft-solution.com/">Wynnsoft-Solution</a></p>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="/js/app.js"></script>
+</body>
+</html>

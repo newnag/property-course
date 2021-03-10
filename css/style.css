@@ -216,7 +216,17 @@ img {
   border: 1px solid gray;
   border-radius: 5px;
   height: 40px;
-  padding: 5px 40px 5px 5px;
+  padding: 5px;
+  -webkit-box-shadow: 0 0 1px #383838;
+          box-shadow: 0 0 1px #383838;
+}
+
+.form-component.select {
+  width: 100%;
+  border: 1px solid gray;
+  border-radius: 5px;
+  height: 40px;
+  padding: 5px 20px 5px 5px;
   -webkit-box-shadow: 0 0 1px #383838;
           box-shadow: 0 0 1px #383838;
 }
@@ -318,6 +328,10 @@ img {
   -ms-grid-column: 1;
   -ms-grid-column-span: 6;
   grid-column: 1/7;
+}
+
+.Ecenter {
+  text-align: center;
 }
 
 header {
