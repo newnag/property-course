@@ -1,0 +1,755 @@
+@import 'variable';
+
+main{
+  .title-content{
+    margin: 1em 0;
+  
+    h1{
+      text-align: center;
+      color: $purple;
+  
+      @media screen and (max-width:$sm){
+        font-size: 20px;
+      }
+    }
+  }
+  
+  .login-page{
+    padding: 0 2em;
+    margin-top: 2em;
+    margin-bottom: 2em;
+  
+    @media screen and (min-width:$lg) and (max-width:($xl)-1px){
+      min-height: 950px;
+    }
+    @media screen and (min-width:$xl){
+      padding: 0 15em;
+    }
+    @media screen and (min-width:$xxl){
+      padding: 0 25em;
+    }
+  
+    .box-login{
+      display: grid;
+      grid-template-columns: 100%;
+  
+      @media screen and (min-width:$md){
+        grid-template-columns: repeat(2,1fr);
+      }
+  
+      .left{
+        display: none;
+        background: rgb(245,147,161);
+        background: linear-gradient(130deg, rgba(245,147,161,1) 0%, rgba(212,40,179,1) 100%, rgba(132,221,236,1) 100%);
+        justify-content: center;
+        align-items: center;
+  
+        figure{
+          img{
+            width: 180px;
+            height: 80px;
+          }
+        }
+  
+        @media screen and (min-width:$md){
+          display: flex;
+        }
+      }
+      .right{
+        background-color: $black;
+        padding: 2em;
+  
+        h2{
+          color: $purple;
+        }
+        p,label{
+          color: $white;
+        }
+  
+        .form{
+          margin: 2em 0;
+        }
+  
+        .button{
+          text-align: center;
+  
+          button{
+            width: 100px;
+          }
+        }
+  
+        .forget-regis{
+          margin-top: 1em;
+          display: flex;
+          justify-content: space-between;
+  
+          .forget,.regis{
+            a{
+              color: $white;
+            }
+          }
+        }
+  
+        .login-link{
+          text-align: right;
+  
+          .login{
+            a{
+              color: $white;
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  .forget-page{
+    padding: 0 2em;
+    margin-top: 2em;
+    margin-bottom: 2em;
+  
+    @media screen and (min-width:$md){
+      padding: 0 10em;
+    }
+    @media screen and (min-width:$lg) and (max-width:($xl)-1px){
+      min-height: 70vh;
+      padding: 0 20em;
+    }
+    @media screen and (min-width:$xl){
+      min-height: 47vh;
+      padding: 0 25em;
+    }
+    @media screen and (min-width:$xxl){
+      min-height: 54vh;
+      padding: 0 35em;
+    }
+  
+    .box{
+      background-color: $black;
+      padding: 2em;
+      border-radius: 5px;
+  
+      .box-input{
+        label{
+          color: $white;
+          font-size: 1em;
+        }
+      }
+  
+      .button{
+        text-align: center;
+      }
+    }
+  }
+  
+  .profile{
+    .form-regis{
+      margin: 4em 0;
+      display: grid;
+      grid-template-columns: 100%;
+      
+      @media screen and (min-width:$lg){
+        grid-template-columns: repeat(2,1fr);
+        grid-column-gap: 3em;
+      }
+  
+      .left,.right{
+        .pad{
+          margin-left: 1em;
+        }
+  
+        .head-form{
+          background-color: $purple;
+          padding: 5px 0;
+          padding-left: 1em;
+          border-radius: 5px;
+  
+          p{
+            color: $white;
+            font-weight: bold;
+            font-size: 1.2em;
+          }
+        }
+  
+        .description{
+          p{
+            padding: .5em 0;
+            color: gray;
+          }
+        }
+  
+        .upload-img{
+          display: flex;
+  
+          .pic{
+            img{
+              width: 122px;
+              height: 156px;
+            }
+          }
+  
+          .upload-zone{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-left: 2em;
+  
+            .ps{
+              margin-top: .5em;
+              width: 70%;
+  
+              p{
+                color: gray;
+              }
+            }
+          }
+        }
+  
+        .idcard{
+          margin-top: 1em;
+          margin-bottom: 1em;
+  
+          .grid-input{
+            margin-top: .5em;
+            display: grid;
+            grid-template-columns: 40% 58%;
+            grid-column-gap: 2%;
+  
+            @media screen and (min-width:$md){
+              grid-template-columns: 20% 78%;
+            }
+            @media screen and (min-width:$lg){
+              grid-template-columns: 35% 63%;
+            }
+            @media screen and (min-width:$xl){
+              grid-template-columns: 20% 78%;
+            }
+          }
+        }
+  
+        .personal{
+          .bg-pad,.nm-pad{
+            .h-form{
+              color: $purple;
+              font-size: 1.2em;
+              margin-top: 1em;
+              margin-bottom: 1em;
+            }
+          }
+  
+          .bg-pad{
+            background-color: #EEEEEE;
+            border-radius: 5px;
+            padding: 1em;
+          }
+          .nm-pad{
+            padding: 1em;
+  
+            @media screen and (max-width:$sm){
+              .date,.month,.year{
+                select{
+                  padding: 5px 0 5px 5px;
+                }
+              }
+              .date{
+                grid-column: 1/3;
+              }
+              .month{
+                grid-column: 3/5;
+              }
+              .year{
+                grid-column: 5/7;
+              }
+            }
+          }
+        }
+      }
+      .right{
+        .h-form{
+          color: $purple;
+          font-size: 1.2em;
+          margin-bottom: 1em;
+        }
+  
+        .nm-pad{
+          padding: 1em;
+        }
+  
+        .job{
+  
+        }
+  
+        .edu{
+          .box{
+            padding-bottom: 1em;
+            border-bottom: 1px dashed gray;
+            margin-bottom: 1em;
+          }
+  
+          .add-education{
+            width: max-content;
+            margin: 1em auto;
+            cursor: pointer;
+  
+            img{
+              width: 15px;
+              height: 15px;
+            }
+            span{
+              color: $purple;
+            }
+          }
+        }
+  
+        .occupation{
+          margin-bottom: 3em;
+          .gcheckbox{
+            display: grid;
+            grid-template-columns: repeat(5,1fr);
+            grid-row-gap: 1em;
+            margin-top: 2em;
+            margin-bottom: 1em;
+  
+            @media screen and (min-width:$lg){
+              grid-template-columns: repeat(4,1fr);
+            }
+            @media screen and (min-width:$xl){
+              grid-template-columns: repeat(5,1fr);
+            }
+          }
+        }
+  
+        .type-business{
+          margin-bottom: 3em;
+          .choice-business{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-gap: 1em;
+            margin-bottom: 1em;
+  
+            @media screen and (min-width:$xxl){
+              grid-template-columns: repeat(2,40%);
+            }
+          }
+        }
+      }
+  
+      .button-save{
+        margin-top: 1em;
+        text-align: center;
+  
+        @media screen and (min-width:$lg){
+          grid-column: 1/3;
+        }
+  
+        >.changepass{
+          background-color: gray;
+          color: $white;
+          border: 1px solid gray;
+          transition: .3s;
+  
+          @media (hover:hover){
+            &:hover{
+              color: gray;
+              background-color: $white;
+              transition: .3s;
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  >.changepass{
+    padding: 0 2em;
+    margin-top: 2em;
+    margin-bottom: 2em;
+  
+    @media screen and (min-width:$md){
+      padding: 0 10em;
+    }
+    @media screen and (min-width:$lg) and (max-width:($xl)-1px){
+      min-height: 70vh;
+      padding: 0 20em;
+    }
+    @media screen and (min-width:$xl){
+      min-height: 47vh;
+      padding: 0 25em;
+    }
+    @media screen and (min-width:$xxl){
+      min-height: 70vh;
+      padding: 0 35em;
+    }
+  
+    .box{
+      background-color: $black;
+      padding: 2em;
+      border-radius: 5px;
+  
+      h2{
+        color: $purple;
+      }
+      p{
+        color: $white;
+      }
+  
+      .form{
+        margin-top: 2em;
+      }
+  
+      .box-input{
+        label{
+          color: $white;
+          font-size: 1em;
+        }
+      }
+  
+      .button{
+        text-align: center;
+      }
+    }
+  }
+  
+  .history{
+    padding: 0 2em;
+    margin-top: 2em;
+    margin-bottom: 2em;
+  
+    @media screen and (min-width:$xl){
+      min-height: 47vh;
+      padding: 0 15em;
+    }
+    @media screen and (min-width:$xxl){
+      min-height: 54vh;
+      padding: 0 10em;
+    }
+  
+    .list{
+      margin-bottom: 3em;
+  
+      .head-list{
+        display: flex;
+        flex-direction: column;
+  
+        @media screen and (min-width:$md){
+          flex-direction: row;
+          justify-content: space-between;
+        }
+  
+        .date-no{
+          display: flex;
+          flex-direction: column;
+          margin-bottom: 1em;
+  
+          @media screen and (min-width:$lg){
+            flex-direction: row;
+          }
+      
+          .date{
+            margin-right: 10px;
+          }
+          .no{
+            color: $purple;
+          }
+        }
+  
+        .status{
+          margin-bottom: 1em;
+  
+          span:nth-child(2){
+            margin-left: 5px;
+            color: $purple;
+          }
+        }
+      }
+  
+      .list-item{
+        padding: .5em;
+        background-color: #F3F3F3;
+  
+        .item{
+          display: grid;
+          grid-template-columns: 25% 73%;
+          grid-column-gap: 2%;
+          grid-row-gap: 1em;
+          border-bottom: 2px solid gray;
+          margin-bottom: 5px;
+          padding: .5em;
+    
+          @media screen and (min-width:$md){
+            padding-bottom: 10px;
+          }
+    
+          figure{
+            display: flex;
+    
+            @media screen and (min-width:$xl){
+              justify-content: center;
+            }
+            img{
+              height: 100px;
+              object-fit: cover;
+    
+              @media screen and (min-width:$md){
+                height: 100%;
+                max-height: 100%;
+              }
+              @media screen and (min-width:$xl){
+                width: 180px;
+              }
+            }
+          }
+    
+          .detail-zone{
+            .detail{
+              display: grid;
+              grid-template-columns: 100%;
+              height: 100%;
+    
+              @media screen and (min-width:$md){
+                grid-template-columns: 75% 25%;
+              }
+    
+              .name-course{
+                @media screen and (min-width:$md){
+                  padding-right: 15px;
+                }
+                @media screen and (min-width:$xl){
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: space-between;
+                }
+    
+                >p{
+                  height: 1.4em;
+                  overflow: hidden;
+                  font-size: 1.2em;
+    
+                  @media screen and (min-width:$md){
+                    font-size: 1.4em;
+                  }
+                }
+                .ps{
+                  margin-top: 15px;
+                  color: lightgray;
+                }
+              }
+              .price{
+                text-align: right;
+                align-self: flex-end;
+    
+                @media screen and (min-width:$md){
+                  align-self: center;
+                }
+    
+                span{
+                  font-size: 1.4em;
+    
+                  @media screen and (min-width:$md){
+                    font-size: 1.8em;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      
+    }
+  }
+  
+  .cart-page{
+    padding: 0 1em;
+    margin-top: 2em;
+    margin-bottom: 2em;
+  
+    @media screen and (min-width:$md){
+      padding: 0 4em;
+    }
+    @media screen and (min-width:$lg){
+      min-height: 70vh;
+      padding: 0 10em;
+    }
+    @media screen and (min-width:$xl){
+      min-height: 47vh;
+      padding: 0 20em;
+    }
+    @media screen and (min-width:$xxl){
+      min-height: 54vh;
+      padding: 0 25em;
+    }
+    @media screen and (min-width:$wide){
+      min-height: 66vh;
+      padding: 0 25em;
+    }
+  
+    .course-zone{
+      .list{
+    
+        .head-list{
+          display: flex;
+          flex-direction: column;
+    
+          @media screen and (min-width:$md){
+            flex-direction: row;
+            justify-content: space-between;
+          }
+    
+          .date-no{
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 1em;
+    
+            @media screen and (min-width:$lg){
+              flex-direction: row;
+            }
+        
+            .date{
+              margin-right: 10px;
+            }
+            .no{
+              color: $purple;
+            }
+          }
+    
+          .status{
+            margin-bottom: 1em;
+    
+            span:nth-child(2){
+              margin-left: 5px;
+              color: $purple;
+            }
+          }
+        }
+    
+        .list-item{
+          padding: .5em;
+          background-color: #F3F3F3;
+    
+          .item{
+            display: grid;
+            grid-template-columns: 13% 53% 30%;
+            grid-column-gap: 2%;
+            grid-row-gap: 1em;
+            border-bottom: 2px solid gray;
+            margin-bottom: 5px;
+      
+            @media screen and (min-width:$md){
+              padding-bottom: 10px;
+            }
+            @media screen and (min-width:$xl){
+              grid-template-columns: 13% 63% 20%;
+            }
+      
+            figure{
+              display: flex;
+              align-items: center;
+              justify-content: center;
+  
+              img{
+                width: 40px;
+                height: 40px;
+                object-fit: cover;
+      
+                @media screen and (min-width:$xl){
+                  width: 100px;
+                  height: 100px;
+                }
+              }
+            }
+      
+            .detail-zone{
+              .detail{
+                display: grid;
+                grid-template-columns: 100%;
+                height: 100%;
+      
+                .name-course{
+                  @media screen and (min-width:$md){
+                    padding-right: 15px;
+                  }
+                  @media screen and (min-width:$xl){
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                  }
+      
+                  >p{
+                    font-size: 1em;
+      
+                    @media screen and (min-width:$md){
+                      font-size: 1.2em;
+                    }
+                  }
+                  .ps{
+                    margin-top: 15px;
+                    color: lightgray;
+                  }
+                }
+                .price{
+                  text-align: right;
+                  align-self: flex-end;
+      
+                  @media screen and (min-width:$md){
+                    align-self: center;
+                  }
+      
+                  span{
+                    font-size: 1.4em;
+      
+                    @media screen and (min-width:$md){
+                      font-size: 1.8em;
+                    }
+                  }
+                }
+              }
+            }
+  
+            .price{
+              display: flex;
+              align-items: center;
+              justify-content: center;
+  
+              span:nth-child(1){
+                margin-right: 5px;
+                font-size: 1em;
+  
+                @media screen and (min-width:$xl){
+                  font-size: 1.2em;
+                }
+              }
+            }
+          }
+        }
+        
+      }
+  
+      .course-footer{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-row-gap: 1em;
+        margin-top: 1em;
+  
+        .right{
+          text-align: center;
+  
+          .cancel{
+            border: 1px solid $black;
+            background-color: $black;
+            color: $white;
+            transition: .3s;
+  
+            @media (hover:hover){
+              &:hover{
+                color: $black;
+                background-color: $white;
+                transition: .3s;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+

@@ -1,0 +1,257 @@
+@import 'variable';
+
+.form-reg{
+  margin: 0 auto;
+  width:794px;
+  height:1122px;
+  -webkit-print-color-adjust:exact;
+  padding-left: 1.2cm;
+  padding-right: 1.2cm;
+
+  .head-form{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1em;
+
+    .logo{
+      img{
+        width: 150px;
+      }
+    }
+
+    .txt-head{
+      text-align: center;
+
+      h1{
+        font-size: 1.4em;
+        font-weight: bold;
+        margin-bottom: .8em;
+      }
+      h2{
+        font-size: 1.1em;
+      }
+    }
+
+    .photo{
+      border: 2px solid #2020ac;
+      height: 120px;
+      width: 100px;
+
+      .pic{
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+
+  .body-form{
+    .head-title-form{
+      border: 2px solid gray;
+      padding: .5em;
+      background-color: lightgray;
+      margin-bottom: 1em;
+
+      p{
+        font-weight: bold;
+      }
+    }
+
+    .form-input{
+      display: grid;
+      margin-bottom: 1em;
+
+      &.name{
+        grid-template-columns: 8.8% 61.8% 5.3% 24%;
+      }
+      &.nameE{
+        grid-template-columns: 12.4% 51.1% 8.1% 9.5% 3.2% 4% 5% 6.5%;
+      }
+      &.phone{
+        grid-template-columns: 11% 22% 4.2% 38.6% 6.1% 18%;
+      }
+      &.social{
+        grid-template-columns: 7.7% 28% 8.3% 24% 5.9% 26%;
+      }
+      &.idcard{
+        grid-template-columns: 24% 24% 52%;
+      }
+      &.addr1{
+        grid-template-columns: 3.9% 9.3% 3.5% 9.2% 10.3% 20.9% 3.3% 15% 3% 21.5%;
+      }
+      &.addr2{
+        grid-template-columns: 8.4% 20% 7.8% 20% 4.7% 20% 9.4% 9.6%;
+      }
+      &.job{
+        grid-template-columns: 13.9% 42.8% 5.9% 21.6% 5.7% 9% 1%;
+      }
+      &.contact{
+        grid-template-columns: 8.8% 28% 10.4% 17% 5.4% 16.6% 3.7% 10%;
+      }
+
+      span{
+        overflow: hidden;
+        font-size: .8em;
+
+        &.dot{
+          border-bottom: 1px dotted black;
+        }
+
+        .circle{
+          width: 15px;
+          height: 15px;
+          border-radius: 50%;
+          border: 2px solid black;
+          display: inline-block;
+        }
+      }
+    }
+
+    .sub-title{
+      font-weight: bold;
+      margin-bottom: 1em;
+    }
+
+    .table{
+      width: 100%;
+      border-collapse: collapse;
+      border: 1px solid black;
+      margin-bottom: 1em;
+
+      thead{
+        tr{
+          td{
+            border: 1px solid black;
+            padding: .3em;
+            font-size: .8em;
+
+            &:nth-child(1){
+              width: 125px;
+            }
+            &:nth-child(2){
+              width: 195px;
+            }
+            &:nth-child(3){
+              width: 200px;
+            }
+          }
+        }
+      }
+
+      tbody{
+        tr{
+          td{
+            padding: .3em;
+            border: 1px solid black;
+            font-size: .8em;
+          }
+        }
+      }
+    }
+
+    .grid-tic{
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      grid-row-gap: 1em;
+      margin-bottom: 1em;
+
+      .item{
+        .circle{
+          display: inline-block;
+          width: 15px;
+          height: 15px;
+          border: 1px solid black;
+          border-radius: 50%;
+        }
+        .dot{
+          border-bottom: 1px dotted black;
+        }
+
+        span{
+          font-size: .8em;
+        }
+
+        &.other{
+          width: 200px;
+          display: grid;
+          grid-template-columns: 10% 39% 51%;
+        }
+      }
+    }
+
+    .flex-tic{
+      display: flex;
+      flex-wrap: wrap;
+
+      .item{
+        margin-right: 2em;
+        margin-bottom: 1em;
+
+        .circle{
+          display: inline-block;
+          width: 15px;
+          height: 15px;
+          border: 1px solid black;
+          border-radius: 50%;
+        }
+        .dot{
+          border-bottom: 1px dotted black;
+        }
+
+        span{
+          font-size: .8em;
+        }
+
+        &.other{
+          width: 300px;
+          display: grid;
+          grid-template-columns: 6% 26% 68%;
+        }
+      }
+    }
+
+    .knowus-tic{
+      display: flex;
+      flex-wrap: wrap;
+
+      .item{
+        margin-right: 2em;
+        margin-bottom: 1em;
+
+        .circle{
+          display: inline-block;
+          width: 15px;
+          height: 15px;
+          border: 1px solid black;
+          border-radius: 50%;
+        }
+        .dot{
+          border-bottom: 1px dotted black;
+        }
+
+        span{
+          font-size: .8em;
+        }
+
+        &.other{
+          width: 300px;
+          display: grid;
+          grid-template-columns: 6% 26% 68%;
+        }
+      }
+    }
+
+    .invoid{
+      display: grid;
+      height: 40px;
+      margin-bottom: 1em;
+
+      .dot{
+        border-bottom: 1px dotted black;
+        height: 20px;
+      }
+    }
+  }
+}

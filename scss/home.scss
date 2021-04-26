@@ -107,6 +107,10 @@
     .swiper-pagination-bullet-active{
       background: $black;
     }
+
+    .swiper-button-next,.swiper-button-prev{
+      color: $purple;
+    }
   }
 }
 
@@ -338,6 +342,9 @@
       .detail{
         height: 100%;
         padding: .25em .5em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
 
         @media screen and (min-width:$lg){
           padding: .5em .75em;
@@ -359,15 +366,36 @@
           text-align: right;
         }
 
+        // สีเพิ่มเติม
+        &.row1{
+          background: #2a0204;
+        }
+        &.row2{
+          background: #280216;
+        }
+        &.row3{
+          background: #2d2708;
+        }
+        &.row4{
+          background: #07230d;
+        }
+        &.row5{
+          background: #2f1f01;
+        }
+        &.row6{
+          background: #0a2a38;
+        }
+
         p{
           color: $white;
         }
         .course-title{
           font-weight: bold;
-          margin-bottom: 10px;
+          //margin-bottom: 10px;
           height: 3.1em;
           overflow: hidden;
-          word-break: break-all;
+          word-break: normal;
+          font-size: 1.6em;
         }
         .text-detail{
           max-height: 3.1em;
@@ -388,7 +416,7 @@
         }
 
         >.button{
-          margin: 5px 0;
+          margin-top: 15px;
         }
       }
 

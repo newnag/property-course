@@ -1,5 +1,19 @@
 @import 'variable';
 
+main{
+  @media screen and (min-width:$lg){
+    position: relative;
+
+    &:before{
+      content: url(/img/BGbox-course.png);
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      z-index: -1;
+    }
+  }
+}
+
 .title-content{
   margin: 1em 0;
 
@@ -17,6 +31,24 @@
   figure{
     img{
       width: 100%;
+      max-height: 60vh;
+
+      @media screen and (min-width:$xl){
+        max-height: 818px;
+      }
+    }
+  }
+
+  @media screen and (min-width:$lg){
+    position: relative;
+    display: flex;
+
+    &:before{
+      content: url(/img/BGbox-left.png);
+      position: absolute;
+      top: 100%;
+      left: 0;
+      z-index: -1;
     }
   }
 }
@@ -32,6 +64,14 @@
       img{
         width: 100%;
         height: 100%;
+      }
+    }
+
+    ul,ol{
+      padding-left: 2em;
+
+      li{
+        list-style: disc;
       }
     }
   }
@@ -62,7 +102,7 @@
 .head-content{
   img{
     width: 100%;
-    max-height: 395px;
+    max-height: 818px;
   }
 }
 
@@ -106,6 +146,7 @@
           }
           @media screen and (min-width:$xxl){
             height: 100%;
+            max-height: 420px;
           }
         }
       }
@@ -182,6 +223,25 @@
           font-size: .8em;
         }
       }
+
+      .ck{
+        background-color: $white;
+
+        p{
+          img{
+            width: 100%;
+            height: 100%;
+          }
+        }
+
+        ul,ol{
+          padding-left: 2em;
+    
+          li{
+            list-style: disc;
+          }
+        }
+      }
     }
 
     .right{
@@ -215,17 +275,18 @@
       @media screen and (max-width:$sm){
         .picture{
           position: relative;
-          height: 250px;
+          //height: 250px;
           overflow: hidden;
 
           .pic1{
             img{
               width: 100%;
-              height: 180px;
+              max-height: 743px;
             }
           }
 
           .pic2{
+            display: none;
             position: absolute;
             bottom: 20px;
             left: 30px;
@@ -238,7 +299,6 @@
           }
         }
       }
-
       @media screen and (min-width:$md){
         .picture{
           position: relative;
@@ -256,19 +316,20 @@
             position: relative;
             overflow: hidden;
   
-            &:before{
-              content: "";
-              position: absolute;
-              top: 288px;
-              left: 0;
-              height: 100%;
-              width: 100%;
-              transform: skewY(10deg);
-              background-color: $white;
-            }
+            // &:before{
+            //   content: "";
+            //   position: absolute;
+            //   top: 288px;
+            //   left: 0;
+            //   height: 100%;
+            //   width: 100%;
+            //   transform: skewY(10deg);
+            //   background-color: $white;
+            // }
           }
   
           .pic2{
+            display: none;
             position: relative;
             overflow: hidden;
             top: -318px;
@@ -294,66 +355,92 @@
       }
       @media screen and (min-width:$lg){
         .picture{
-          height: 360px;
+          height: 400px;
+          overflow: visible;
+
+          &:after{
+            content: url(/img/line-near-pic.png);
+            position: absolute;
+            top: 50%;
+            left: -40px;
+            transform: translateY(-65%);
+          }
 
           .pic1{
             &:before{
+              content: "";
+              position: absolute;
               top: 282px;
+              left: 0;
+              height: 100%;
+              width: 100%;
+              transform: skewY(10deg);
+              background-color: $white;
+            }
+
+            img{
+              max-height: 743px;
             }
           }
           .pic2{
-            top: -130px;
+            display: block;
+            top: -265px;
 
             &:before{
               top: 140px;
             }
 
             img{
-              height: 150px;
+              height: 345px;
             }
           }
         }
       }
       @media screen and (min-width:$xl){
         .picture{
-          height: 400px;
+          height: 550px;
 
           .pic1{
             &:before{
-              top: 345px;
-            }
-          }
-          .pic2{
-            top: -170px;
-
-            &:before{
-              top: 130;
+              top: 400px;
             }
 
             img{
-              height: 150px;
-            }
-          }
-        }
-      }
-      @media screen and (min-width:$xxl){
-        .picture{
-          height: 400px;
-
-          .pic1{
-            &:before{
-              top: 333px;
+              max-height: 743px;
             }
           }
           .pic2{
             top: -270px;
 
             &:before{
-              top: 130px;
+              top: 130;
             }
 
             img{
-              height: 150px;
+              height: 345px;
+            }
+          }
+        }
+      }
+      @media screen and (min-width:$xxl){
+        .picture{
+          height: 550px;
+
+          .pic1{
+            &:before{
+              top: 440px;
+            }
+          }
+          .pic2{
+            top: -350px;
+
+            &:before{
+              top: 150px;
+            }
+
+            img{
+              height: 345px;
+              width: 366px;
             }
           }
         }
@@ -676,6 +763,7 @@
         padding-top: 1em;
         textarea{
           margin-top: .5em;
+          resize: none;
         }
       }
     }
@@ -1045,6 +1133,30 @@
     max-width: 1920px;
     max-height: 600px;
   }
+
+  .swiper-pagination{
+    text-align: left;
+    margin-left: 1em;
+
+    @media screen and (min-width:$lg){
+      margin-left: 2em;
+    }
+    @media screen and (min-width:$xl){
+      margin-left: 4em;
+      margin-bottom: 2em;
+    }
+
+    .swiper-pagination-bullet{
+      background: $purple;
+    }
+    .swiper-pagination-bullet-active{
+      background: $black;
+    }
+
+    .swiper-button-next,.swiper-button-prev{
+      color: $purple;
+    }
+  }
 }
 
 .activity-page{
@@ -1174,6 +1286,13 @@
       img{
         width: 100%;
         height: 100%;
+      }
+    }
+    ul,ol{
+      padding-left: 2em;
+
+      li{
+        list-style: disc;
       }
     }
   }
