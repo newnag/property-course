@@ -11,11 +11,19 @@ main{
       right: 0;
       z-index: -1;
     }
+
+    &:after{
+      content: url(/img/BGbox-left.png);
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
   }
 }
 
 .title-content{
-  margin: 1em 0;
+  padding: 1em 0;
 
   h1{
     text-align: center;
@@ -54,9 +62,9 @@ main{
 }
 
 .about-page{
-  padding: 0 1em;
-  margin-top: 2em;
-  margin-bottom: 2em;
+  padding: 2em 1em;
+  // margin-top: 2em;
+  // margin-bottom: 2em;
 
   .ck{
     margin: 2em 0;
@@ -102,14 +110,14 @@ main{
 .head-content{
   img{
     width: 100%;
-    max-height: 818px;
+    max-height: 595px;
   }
 }
 
 .course-page{
-  padding: 0 1em;
-  margin-top: 5em;
-  margin-bottom: 3em;
+  padding: 5em 1em;
+  // margin-top: 5em;
+  // margin-bottom: 3em;
 
   .grid-course{
     display: grid;
@@ -199,9 +207,9 @@ main{
 }
 
 .course-detail-page{
-  padding: 0 1em;
-  margin-top: 2em;
-  margin-bottom: 2em;
+  padding: 2em 1em;
+  // margin-top: 2em;
+  // margin-bottom: 2em;
 
   .box-detail{
     display: grid;
@@ -209,8 +217,8 @@ main{
     grid-row-gap: 3em;
 
     @media screen and (min-width:$lg){
-      grid-template-columns: 49% 49%;
-      grid-column-gap: 2%;
+      grid-template-columns: 48% 48%;
+      grid-column-gap: 4%;
     }
 
     .left{
@@ -275,7 +283,7 @@ main{
       @media screen and (max-width:$sm){
         .picture{
           position: relative;
-          //height: 250px;
+          height: 100%;
           overflow: hidden;
 
           .pic1{
@@ -302,7 +310,7 @@ main{
       @media screen and (min-width:$md){
         .picture{
           position: relative;
-          height: 350px;
+          height: 100%;
           overflow: hidden;
           margin-top: 1em;
   
@@ -355,22 +363,21 @@ main{
       }
       @media screen and (min-width:$lg){
         .picture{
-          height: 400px;
+          height: 743px;
           overflow: visible;
 
           &:after{
             content: url(/img/line-near-pic.png);
             position: absolute;
-            top: 50%;
+            top: 10%;
             left: -40px;
-            transform: translateY(-65%);
           }
 
           .pic1{
             &:before{
               content: "";
               position: absolute;
-              top: 282px;
+              top: 430px;
               left: 0;
               height: 100%;
               width: 100%;
@@ -379,44 +386,54 @@ main{
             }
 
             img{
-              max-height: 743px;
+              height: 743px;
             }
           }
           .pic2{
             display: block;
-            top: -265px;
+            top: -435px;
+            height: 345px;
+            width: 366px;
 
             &:before{
-              top: 140px;
+              top: 170px;
+              z-index: 1;
             }
 
             img{
               height: 345px;
+              position: absolute;
+              top: -50%;
+              left: -50%;
+              transform: translate(50%, 25%);
             }
           }
         }
       }
       @media screen and (min-width:$xl){
         .picture{
-          height: 550px;
+          height: 743px;
 
           .pic1{
             &:before{
-              top: 400px;
+              top: 457px;
             }
 
             img{
-              max-height: 743px;
+              height: 743px;
             }
           }
           .pic2{
-            top: -270px;
+            top: -410px;
+            height: 345px;
+            width: 366px;
 
             &:before{
-              top: 130;
+              top: 160px;
             }
 
             img{
+              width: 366px;
               height: 345px;
             }
           }
@@ -424,18 +441,18 @@ main{
       }
       @media screen and (min-width:$xxl){
         .picture{
-          height: 550px;
+          height: 743px;
 
           .pic1{
             &:before{
-              top: 440px;
+              top: 528px;
             }
           }
           .pic2{
             top: -350px;
 
             &:before{
-              top: 150px;
+              top: 160px;
             }
 
             img{
@@ -1160,9 +1177,9 @@ main{
 }
 
 .activity-page{
-  padding: 0 1em;
-  margin-top: 2em;
-  margin-bottom: 2em;
+  padding: 2em 1em;
+  // margin-top: 2em;
+  // margin-bottom: 2em;
 
   .grid-box{
     display: grid;
@@ -1239,9 +1256,7 @@ main{
 }
 
 .activity-detail-page{
-  padding: 0 1em;
-  margin-top: 2em;
-  margin-bottom: 2em;
+  padding: 2em 1em;
 
   @media screen and (min-width:$lg) and (max-width:($xl)-1px) {
     min-height: 950px;
@@ -1299,9 +1314,9 @@ main{
 }
 
 .article-page{
-  padding: 0 1em;
-  margin-top: 2em;
-  margin-bottom: 2em;
+  padding: 2em 1em;
+  // margin-top: 2em;
+  // margin-bottom: 2em;
 
   .grid-box{
     display: grid;
@@ -1328,12 +1343,23 @@ main{
       align-items: center;
       width: 300px;
 
+      &:after{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 50%;
+        background-color: #00000071;
+        transition: .3s;
+      }
+
       img{
         max-width: 300px;
         max-height: 425px;
         width: 100%;
         height: 100%;
-        filter: brightness(.2);
+        //filter: brightness(.5);
       }
 
       .detail{
@@ -1343,6 +1369,7 @@ main{
         width: 100%;
         height: max-content;
         padding: 0 1em;
+        z-index: 1;
 
         .date{
           p{
@@ -1381,13 +1408,13 @@ main{
       }
 
       &:hover{
-        .detail{
-          z-index: -1;
+        &:after{
+          height: 0;
           transition: .3s;
         }
 
-        img{
-          filter: brightness(1);
+        .detail{
+          z-index: -1;
           transition: .3s;
         }
 
@@ -1402,9 +1429,9 @@ main{
 }
 
 .contact-page{
-  padding: 0 1em;
-  margin-top: 2em;
-  margin-bottom: 2em;
+  padding: 2em 1em;
+  // margin-top: 2em;
+  // margin-bottom: 2em;
 
   .box-contact{
     display: grid;

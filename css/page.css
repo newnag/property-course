@@ -44,10 +44,17 @@
     right: 0;
     z-index: -1;
   }
+  main:after {
+    content: url(/img/BGbox-left.png);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
 }
 
 .title-content {
-  margin: 1em 0;
+  padding: 1em 0;
 }
 
 .title-content h1 {
@@ -89,9 +96,7 @@
 }
 
 .about-page {
-  padding: 0 1em;
-  margin-top: 2em;
-  margin-bottom: 2em;
+  padding: 2em 1em;
 }
 
 .about-page .ck {
@@ -144,13 +149,11 @@
 
 .head-content img {
   width: 100%;
-  max-height: 818px;
+  max-height: 595px;
 }
 
 .course-page {
-  padding: 0 1em;
-  margin-top: 5em;
-  margin-bottom: 3em;
+  padding: 5em 1em;
 }
 
 .course-page .grid-course {
@@ -257,9 +260,7 @@
 }
 
 .course-detail-page {
-  padding: 0 1em;
-  margin-top: 2em;
-  margin-bottom: 2em;
+  padding: 2em 1em;
 }
 
 .course-detail-page .box-detail {
@@ -272,9 +273,9 @@
 
 @media screen and (min-width: 1024px) {
   .course-detail-page .box-detail {
-    -ms-grid-columns: 49% 49%;
-        grid-template-columns: 49% 49%;
-    grid-column-gap: 2%;
+    -ms-grid-columns: 48% 48%;
+        grid-template-columns: 48% 48%;
+    grid-column-gap: 4%;
   }
 }
 
@@ -348,6 +349,7 @@
 @media screen and (max-width: 640px) {
   .course-detail-page .box-detail .right .picture {
     position: relative;
+    height: 100%;
     overflow: hidden;
   }
   .course-detail-page .box-detail .right .picture .pic1 img {
@@ -371,7 +373,7 @@
 @media screen and (min-width: 768px) {
   .course-detail-page .box-detail .right .picture {
     position: relative;
-    height: 350px;
+    height: 100%;
     overflow: hidden;
     margin-top: 1em;
   }
@@ -408,21 +410,19 @@
 
 @media screen and (min-width: 1024px) {
   .course-detail-page .box-detail .right .picture {
-    height: 400px;
+    height: 743px;
     overflow: visible;
   }
   .course-detail-page .box-detail .right .picture:after {
     content: url(/img/line-near-pic.png);
     position: absolute;
-    top: 50%;
+    top: 10%;
     left: -40px;
-    -webkit-transform: translateY(-65%);
-            transform: translateY(-65%);
   }
   .course-detail-page .box-detail .right .picture .pic1:before {
     content: "";
     position: absolute;
-    top: 282px;
+    top: 430px;
     left: 0;
     height: 100%;
     width: 100%;
@@ -431,53 +431,64 @@
     background-color: #fff;
   }
   .course-detail-page .box-detail .right .picture .pic1 img {
-    max-height: 743px;
+    height: 743px;
   }
   .course-detail-page .box-detail .right .picture .pic2 {
     display: block;
-    top: -265px;
+    top: -435px;
+    height: 345px;
+    width: 366px;
   }
   .course-detail-page .box-detail .right .picture .pic2:before {
-    top: 140px;
+    top: 170px;
+    z-index: 1;
   }
   .course-detail-page .box-detail .right .picture .pic2 img {
     height: 345px;
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    -webkit-transform: translate(50%, 25%);
+            transform: translate(50%, 25%);
   }
 }
 
 @media screen and (min-width: 1280px) {
   .course-detail-page .box-detail .right .picture {
-    height: 550px;
+    height: 743px;
   }
   .course-detail-page .box-detail .right .picture .pic1:before {
-    top: 400px;
+    top: 457px;
   }
   .course-detail-page .box-detail .right .picture .pic1 img {
-    max-height: 743px;
+    height: 743px;
   }
   .course-detail-page .box-detail .right .picture .pic2 {
-    top: -270px;
+    top: -410px;
+    height: 345px;
+    width: 366px;
   }
   .course-detail-page .box-detail .right .picture .pic2:before {
-    top: 130;
+    top: 160px;
   }
   .course-detail-page .box-detail .right .picture .pic2 img {
+    width: 366px;
     height: 345px;
   }
 }
 
 @media screen and (min-width: 1536px) {
   .course-detail-page .box-detail .right .picture {
-    height: 550px;
+    height: 743px;
   }
   .course-detail-page .box-detail .right .picture .pic1:before {
-    top: 440px;
+    top: 528px;
   }
   .course-detail-page .box-detail .right .picture .pic2 {
     top: -350px;
   }
   .course-detail-page .box-detail .right .picture .pic2:before {
-    top: 150px;
+    top: 160px;
   }
   .course-detail-page .box-detail .right .picture .pic2 img {
     height: 345px;
@@ -1397,9 +1408,7 @@
 }
 
 .activity-page {
-  padding: 0 1em;
-  margin-top: 2em;
-  margin-bottom: 2em;
+  padding: 2em 1em;
 }
 
 .activity-page .grid-box {
@@ -1509,9 +1518,7 @@
 }
 
 .activity-detail-page {
-  padding: 0 1em;
-  margin-top: 2em;
-  margin-bottom: 2em;
+  padding: 2em 1em;
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1279px) {
@@ -1584,9 +1591,7 @@
 }
 
 .article-page {
-  padding: 0 1em;
-  margin-top: 2em;
-  margin-bottom: 2em;
+  padding: 2em 1em;
 }
 
 .article-page .grid-box {
@@ -1642,13 +1647,23 @@
   width: 300px;
 }
 
+.article-page .grid-box .box:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background-color: #00000071;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
 .article-page .grid-box .box img {
   max-width: 300px;
   max-height: 425px;
   width: 100%;
   height: 100%;
-  -webkit-filter: brightness(0.2);
-          filter: brightness(0.2);
 }
 
 .article-page .grid-box .box .detail {
@@ -1660,6 +1675,7 @@
   height: -moz-max-content;
   height: max-content;
   padding: 0 1em;
+  z-index: 1;
 }
 
 .article-page .grid-box .box .detail .date p {
@@ -1698,15 +1714,14 @@
   border: unset;
 }
 
-.article-page .grid-box .box:hover .detail {
-  z-index: -1;
+.article-page .grid-box .box:hover:after {
+  height: 0;
   -webkit-transition: .3s;
   transition: .3s;
 }
 
-.article-page .grid-box .box:hover img {
-  -webkit-filter: brightness(1);
-          filter: brightness(1);
+.article-page .grid-box .box:hover .detail {
+  z-index: -1;
   -webkit-transition: .3s;
   transition: .3s;
 }
@@ -1719,9 +1734,7 @@
 }
 
 .contact-page {
-  padding: 0 1em;
-  margin-top: 2em;
-  margin-bottom: 2em;
+  padding: 2em 1em;
 }
 
 .contact-page .box-contact {
