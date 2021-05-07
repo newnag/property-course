@@ -233,7 +233,7 @@ img{
 }
 
 .msg-error{
-  display: block;
+  font-size: .6em;
 }
 
 /////////////////////////////////////////////////
@@ -487,7 +487,7 @@ header{
           position: absolute;
           width: 100%;
           height: max-content;
-          padding: 0 1em;
+          padding: 1em;
           background: $black;
           z-index: 2;
           transition: .2s;
@@ -582,7 +582,7 @@ header{
 
 footer{
   .footer{
-    background: linear-gradient(90deg, rgba(71,25,52,1) 0%, rgba(174,23,105,1) 15%, rgba(231,26,137,1) 50%, rgba(174,23,105,1) 85%, rgba(71,25,52,1) 100%);
+    background: $purple;
 
     .content-footer{
       padding: 3em 2em;

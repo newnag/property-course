@@ -349,7 +349,7 @@ img {
 }
 
 .msg-error {
-  display: block;
+  font-size: .6em;
 }
 
 header {
@@ -690,7 +690,7 @@ header .header nav .account .acc-menu {
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
-  padding: 0 1em;
+  padding: 1em;
   background: #000;
   z-index: 2;
   -webkit-transition: .2s;
@@ -783,8 +783,7 @@ header.scroll {
 }
 
 footer .footer {
-  background: -webkit-gradient(linear, left top, right top, from(#471934), color-stop(15%, #ae1769), color-stop(50%, #e71a89), color-stop(85%, #ae1769), to(#471934));
-  background: linear-gradient(90deg, #471934 0%, #ae1769 15%, #e71a89 50%, #ae1769 85%, #471934 100%);
+  background: #ED1F8F;
 }
 
 footer .footer .content-footer {

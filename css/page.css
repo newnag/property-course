@@ -154,6 +154,7 @@
 
 .course-page {
   padding: 5em 1em;
+  padding-bottom: 22em;
 }
 
 .course-page .grid-course {
@@ -257,6 +258,44 @@
   bottom: 0;
   color: #ED1F8F;
   font-size: 13px;
+}
+
+.course-page .button-help {
+  position: fixed;
+  bottom: 10%;
+  right: 3%;
+  width: 120px;
+  height: 50px;
+}
+
+@media screen and (min-width: 1280px) {
+  .course-page .button-help {
+    top: 10%;
+    bottom: unset;
+  }
+}
+
+.course-page .button-help button {
+  background-color: #ED1F8F;
+  color: #fff;
+  border-radius: 30px;
+  border: unset;
+  padding: 1em;
+  width: 100%;
+  opacity: .7;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+@media (hover: hover) {
+  .course-page .button-help button {
+    opacity: .5;
+  }
+  .course-page .button-help button:hover {
+    opacity: 1;
+    -webkit-transition: .3s;
+    transition: .3s;
+  }
 }
 
 .course-detail-page {
@@ -430,18 +469,48 @@
             transform: skewY(10deg);
     background-color: #fff;
   }
+  .course-detail-page .box-detail .right .picture .pic1:after {
+    content: '';
+    position: absolute;
+    bottom: 333px;
+    left: -28px;
+    width: 95px;
+    height: 126px;
+    border: 13px solid #fff;
+    border-top: none;
+    border-right: none;
+    border-radius: 50%;
+    -webkit-transform: rotate(-16deg);
+            transform: rotate(-16deg);
+  }
   .course-detail-page .box-detail .right .picture .pic1 img {
     height: 743px;
+    border-radius: 10px 0 0 0;
   }
   .course-detail-page .box-detail .right .picture .pic2 {
     display: block;
     top: -435px;
     height: 345px;
-    width: 366px;
+    width: 230px;
+    border-radius: 0 10px 0 0;
   }
   .course-detail-page .box-detail .right .picture .pic2:before {
-    top: 170px;
+    top: 180px;
     z-index: 1;
+  }
+  .course-detail-page .box-detail .right .picture .pic2:after {
+    content: '';
+    position: absolute;
+    top: 157px;
+    right: -3px;
+    border: 9px solid #fff;
+    border-top: none;
+    border-left: none;
+    width: 41px;
+    height: 15px;
+    -webkit-transform: skew(-39deg, 2deg) rotate(-16deg);
+            transform: skew(-39deg, 2deg) rotate(-16deg);
+    border-radius: 20px;
   }
   .course-detail-page .box-detail .right .picture .pic2 img {
     height: 345px;
@@ -450,6 +519,8 @@
     left: -50%;
     -webkit-transform: translate(50%, 25%);
             transform: translate(50%, 25%);
+    -o-object-fit: contain;
+       object-fit: contain;
   }
 }
 
@@ -460,16 +531,18 @@
   .course-detail-page .box-detail .right .picture .pic1:before {
     top: 457px;
   }
+  .course-detail-page .box-detail .right .picture .pic1:after {
+    bottom: 318px;
+  }
   .course-detail-page .box-detail .right .picture .pic1 img {
     height: 743px;
   }
   .course-detail-page .box-detail .right .picture .pic2 {
     top: -410px;
     height: 345px;
-    width: 366px;
   }
   .course-detail-page .box-detail .right .picture .pic2:before {
-    top: 160px;
+    top: 180px;
   }
   .course-detail-page .box-detail .right .picture .pic2 img {
     width: 366px;
@@ -484,11 +557,14 @@
   .course-detail-page .box-detail .right .picture .pic1:before {
     top: 528px;
   }
+  .course-detail-page .box-detail .right .picture .pic1:after {
+    bottom: 259px;
+  }
   .course-detail-page .box-detail .right .picture .pic2 {
-    top: -350px;
+    top: -390px;
   }
   .course-detail-page .box-detail .right .picture .pic2:before {
-    top: 160px;
+    top: 180px;
   }
   .course-detail-page .box-detail .right .picture .pic2 img {
     height: 345px;
@@ -775,6 +851,30 @@
     -ms-grid-column-span: 2;
     grid-column: 5/7;
   }
+}
+
+.course-detail-page .form-regis .left .personal #course-regis-date, .course-detail-page .form-regis .right .personal #course-regis-date {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1/3;
+}
+
+.course-detail-page .form-regis .left .personal #course-regis-month, .course-detail-page .form-regis .right .personal #course-regis-month {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 2;
+  grid-column: 3/5;
+}
+
+.course-detail-page .form-regis .left .personal #course-regis-year, .course-detail-page .form-regis .right .personal #course-regis-year {
+  -ms-grid-column: 5;
+  -ms-grid-column-span: 2;
+  grid-column: 5/7;
+}
+
+.course-detail-page .form-regis .left .personal #course-regis-moo, .course-detail-page .form-regis .right .personal #course-regis-moo {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 2;
+  grid-column: 3/5;
 }
 
 .course-detail-page .form-regis .right .h-form {
