@@ -266,6 +266,7 @@
   right: 3%;
   width: 120px;
   height: 50px;
+  z-index: 5;
 }
 
 @media screen and (min-width: 1280px) {
@@ -1004,6 +1005,45 @@
 .course-detail-page .map iframe {
   width: 100% !important;
   height: 300px !important;
+}
+
+.course-detail-page .button-help {
+  position: fixed;
+  bottom: 10%;
+  right: 3%;
+  width: 120px;
+  height: 50px;
+  z-index: 5;
+}
+
+@media screen and (min-width: 1280px) {
+  .course-detail-page .button-help {
+    top: 10%;
+    bottom: unset;
+  }
+}
+
+.course-detail-page .button-help button {
+  background-color: #ED1F8F;
+  color: #fff;
+  border-radius: 30px;
+  border: unset;
+  padding: 1em;
+  width: 100%;
+  opacity: .7;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+@media (hover: hover) {
+  .course-detail-page .button-help button {
+    opacity: .5;
+  }
+  .course-detail-page .button-help button:hover {
+    opacity: 1;
+    -webkit-transition: .3s;
+    transition: .3s;
+  }
 }
 
 .confirm-page {
